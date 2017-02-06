@@ -1,0 +1,34 @@
+/*  # Theme Simple header with simple list
+===========================================*/
+.item-divider.header-divider {
+  background: #00bea4;
+  background: -moz-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+  background: -webkit-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+  background: linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 );
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  z-index: 9; }
+
+.item-divider h2.header-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 30px; }
+
+.item-bcg {
+  background-color: rgba(244, 245, 245, 0.8) !important;
+  border-width: 0;
+  margin: 0;
+  transition: all 0s ease-out; }
+  .item-bcg h2.item-title {
+    color: #7fcac3;
+    font-size: 14px;
+    line-height: 37px; }
+  .item-bcg.activated {
+    border-color: transparent; }
+  .item-bcg .icon-small {
+    color: #00bea4 !important;
+    font-size: 20px !important; }
+  .item-bcg img {
+    border-radius: 4px !important; }

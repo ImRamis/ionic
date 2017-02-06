@@ -1,0 +1,18 @@
+<!--- Theme Parallax Basic -->
+<ion-content delegate-handle="scroller" elastic-header="elastic-header" class="has-header container-background-full">
+  <!--- Parallax Header -->
+  <div id="elastic-header" class="container-hearder-image">
+    <img class="avatar" ng-src="{{parallaxController.data.avatar}}" alt="{{parallaxController.data.avatarAlt}}" />
+    <h1 class="parallax-title">{{parallaxController.data.title}}</h2>
+  </div>
+  <!--- Parallax Content -->
+  <ion-list>
+    <ion-item class="item-bcg item-avatar-left item-icon-right waves-effect waves-light waves-block"
+    ng-click="parallaxController.onClick('onItemClick', item, $event)"
+    ng-repeat="item in parallaxController.data.items">
+      <img ng-src="{{item.icon}}" alt="avatar" />
+      <div class="item-title">{{item.title}}</div>
+      <i class="icon-small icon" ng-class="{'icon-heart-outline': !item.favorite, 'icon-heart': item.favorite}"></i>
+    </ion-item>
+  </ion-list>
+</ion-content>

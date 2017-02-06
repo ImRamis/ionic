@@ -1,0 +1,67 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  # Theme With Header
+===========================================*/
+img {
+  width: 100%;
+}
+
+h1.wizard-title {
+  @include wizard( 'wizard-title');
+}
+
+p.wizard-body-text {
+  @include wizard( 'wizard-body-text');
+}
+
+.background-color {
+  background-color: #263238;
+}
+
+.ion-record:before {
+  font-family: 'Fontello';
+  content: "\ea58";
+  color: #ffffff;
+}
+
+.button-default {
+  @include button( 'button-default');
+  width: 110px;
+  margin: 0 auto;
+}
+
+.slider {
+  height: 85%;
+}
+
+.scroll {
+  height: 100%;
+  min-height: 100%;
+}
+
+.wizard-travel-description {
+  padding: 20px;
+}
+
+.slidertext {
+  position: relative;
+}
+
+.slidertext::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 50%;
+  background: #263238;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient( transparent, #263238 60%);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient( transparent, #263238 60%);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient( transparent, #263238 60%);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient( transparent, #263238 60%);
+  /* Standard syntax */
+}

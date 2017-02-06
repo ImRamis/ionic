@@ -1,0 +1,9 @@
+<ion-content class="left-menu-background center padding" ng-init="fetchSkills();">
+    <ion-list>
+        <div class=" card half card-image" ng-repeat="item in category" ng-click="selectCategory(item)">
+            <div class=" waves-effect waves-block waves-dark card-image">
+                <img ng-src="{{'img/'+item.OCCUPATION+'.png'}}" alt="not available">
+            </div>
+        </div>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,225 @@
+// Include Main-Style.scss
+@import "main-style.scss";
+
+// General Theme
+.bar.bar-stable .title,
+.item h2,
+.item h3,
+a,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p {
+  font-family: $font-name;
+  font-weight: $font-weight-value;
+}
+.bar-subheader,
+.has-header {
+  top: $bar-height !important;
+}
+.list {
+  padding-top: 0;
+}
+
+//General Header
+.bar.bar-stable {
+  @include toolBar;
+  .title {
+    @include toolBar-title;
+  }
+  // Button Buy Now
+  .buy-now.btn {
+    color: #fff;
+    padding: 0 10px;
+    box-shadow: none;
+    border: 1px solid #fff;
+    margin-top: 5px;
+    font-weight: normal;
+  }
+  .button.button-clear {
+    padding: 0 5px;
+    color: theme-colors('mainColors', 'secondary');
+  }
+  .buttons.buttons-left.header-item {
+    padding: 0 5px;
+    color: theme-colors('mainColors', 'secondary');
+  }
+  .button {
+    .icon-arrow-left:before {
+      font-size: font-size-text('h2');
+      padding: 5px 0;
+    }
+  }
+  .back-text {
+    display: none !important;
+  }
+}
+
+// Settings Backgrounds All srceens
+.menu-content-background {
+  background-image: url('../img/background/31.jpg');
+  @include background-size;
+}
+
+// Big Images Container Background
+.container-background, .container-background-full {
+  @include background-size;
+}
+.left-menu-background {
+  @include background-size;
+  @include darkening-blend-mode;
+  background-image: url('../img/background/29.jpg');
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+// Menu Settings
+.main-menu {
+  background-color: transparent;
+  border-color: transparent;
+  &.item {
+    border-width: 0;
+    margin: 0;
+  }
+  .item-content {
+    padding-left: 30px;
+    background-color: theme-colors('backgrounds', 'primary', 'opacity80')!important;
+    color: theme-colors('textColors', 'primary');
+    font-size: 20px;
+  }
+  i.icon {
+    font-size: 20px;
+  }
+}
+
+// Pull To Refresher
+.scroll-refresher .ionic-refresher-content {
+  color: theme-colors('textColors', 'primary');
+}
+.spinner,
+.spinner-ios,
+.spinner-ios-small {
+  color: theme-colors('mainColors', 'accent');
+  fill: theme-colors('mainColors', 'accent');
+  stroke: theme-colors('mainColors', 'accent');
+}
+
+// Settings First Screens With Text
+.block-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.block-table .scroll {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+//Ionic Descript
+.ionic-descript {
+  color: #fde800;
+  padding: 0 20px;
+
+  h2 {
+    color: #fde800;
+    font-size: 24px;
+    margin-bottom: 3px;
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+.ionic-documentation {
+  margin-top: 30%;
+  display: block;
+  text-decoration: underline;
+  color: #fff;
+  padding: 0 20px;
+}
+
+// Style Spinner Components
+.spinner-view {
+  .spinner img {
+    width: 100px;
+    height: 100px;
+    margin: 50% auto 0;
+    display: block;
+  }
+  .scroll {
+    height: 100%;
+  }
+  .slider {
+    height: 100%;
+  }
+  .slider-pager {
+    .ion-record:before {
+      color: #00887a;
+    }
+  }
+}
+
+
+
+// Settings Toast
+#toast-container {
+  text-align: center;
+}
+.custom-toast {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 0.8em;
+  word-break: break-all;
+}
+
+// Shape Images Size
+.shape-img-block {
+  width: 50%;
+  float: left;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  img {
+    max-width: 100px;
+  }
+}
+
+// Settings Left Menu Background Color
+.menu-panel {
+  span {
+    color: theme-colors('mainColors', 'accent');
+    display: block;
+    clear: both;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .back-menu.btn {
+    border: 1px solid theme-colors('mainColors', 'accent');
+    margin: 50% auto 0;
+    font-size: 16px;
+    color: theme-colors('mainColors', 'accent');
+    font-weight: bold;
+    i.left {
+      margin-right: 0;
+    }
+  }
+}
+
+// Ios Style Settings
+.platform-ios {
+  .has-header {
+    top: 64px!important;
+  }
+  .bar-subheader {
+    @extend .has-header;
+  }
+}
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+  margin-top: 10px;
+}

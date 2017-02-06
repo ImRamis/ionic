@@ -1,0 +1,67 @@
+<!--- Theme Parallax Swiper -->
+<ion-content delegate-handle="scroller" elastic-header="elastic-header" class="has-header container-background-full">
+  <!--- Parallax Header -->
+  <div id="elastic-header" class="container-hearder-image" ng-click="parallaxController.toggleExpand()">
+    <!--- Parallax Header -->
+    <ion-slide-box on-slide-changed="parallaxController.setSlider(true)">
+      <ion-slide class="box" ng-repeat="image in parallaxController.data.headerImages track by $index"
+        style="background-image: url('{{image}}')">
+          <h1 class="parallax-title">{{parallaxController.data.title}}</h1>
+      </ion-slide>
+    </ion-slide-box>
+  </div>
+  <!--- Parallax Content -->
+  <ion-list>
+    <div class="text-view-bcg">
+      <!--- Parallx Social -->
+      <div class="text-view-bcg-top">
+        <div class="half">
+          <span class="social">
+            <i class="icon {{parallaxController.data.iconLike}}"
+              ng-click="parallaxController.onClick('onLike', null, $event)"></i>
+            <i class="icon {{parallaxController.data.iconFavorite}}"
+                ng-click="parallaxController.onClick('onFavorite', null, $event)"></i>
+            <i class="icon  {{parallaxController.data.iconShare}}"
+                ng-click="parallaxController.onClick('onShare', null, $event)"></i>
+          </span>
+          <span class="span-large price">{{parallaxController.data.price}}</span>
+        </div>
+        <div class="half">
+          <div class="review-block">
+            <button class="button-default waves-effect waves-light btn-flat ng-binding"
+              ng-click="parallaxController.onClick('onItemClick', null, $event)">
+              {{parallaxController.data.buyButton}}
+            </button>
+            <div class="review">
+              <i class="icon-small icon icon-star"></i>
+              <span class="span-small">{{parallaxController.data.reviews}}</span>
+            </div>
+            <div class="review">
+              <i class="icon-small icon icon-checkbox-marked-circle"></i>
+              <span class="span-small">{{parallaxController.data.featured}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- Parallx Block Content -->
+      <div class="item-content item-text-wrap">
+        <div class="info-text" ng-repeat="item in parallaxController.data.items">
+          <p class="text-view-body">{{item.name}}</p>
+          <p class="text-view-body">{{item.value}}</p>
+        </div>
+      </div>
+      <div class="item-content item-text-wrap">
+        <div class="info-text" ng-repeat="item in parallaxController.data.items">
+          <p class="text-view-body">{{item.name}}</p>
+          <p class="text-view-body">{{item.value}}</p>
+        </div>
+      </div>
+      <div class="item-content item-text-wrap">
+        <div class="info-text" ng-repeat="item in parallaxController.data.items">
+          <p class="text-view-body">{{item.name}}</p>
+          <p class="text-view-body">{{item.value}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

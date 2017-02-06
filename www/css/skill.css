@@ -1,0 +1,43 @@
+/*  #Theme Category 1 (Animals)
+===========================================*/
+.gallery-title i.icon {
+  color: #7fcac3;
+  font-size: 20px;
+  right: 0px; }
+
+.gallery-title h2.item-title {
+  color: #7fcac3;
+  font-size: 14px; }
+
+.gallery-title p.item-subtitle {
+  color: #bdbcbc;
+  font-size: 14px; }
+
+.card.half {
+  width: 50%;
+  display: block;
+  float: left;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0; }
+
+.card-image {
+  height: 140px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 5px; }
+
+.gallery-title.item {
+  padding-right: 40px; }
+
+.gallery-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(37, 37, 37, 0.5) !important;
+  bottom: 0;
+  min-height: 45px;
+  border-bottom: 1px solid transparent !important; }

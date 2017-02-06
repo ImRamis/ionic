@@ -1,0 +1,24 @@
+<!--Theme With Header -->
+<ion-content class="has-header" scroll="false">
+	<ion-slide-box on-slide-changed="wizardController.slideHasChanged($index)">
+		<ion-slide ng-repeat="item in wizardController.data.items" class="text-center"
+		style="background-color:{{item.backgroundColor}};">
+			<div class="slidertext">
+				<i class="icon {{item.icon}}"></i>
+				<h1 class="wizard-title">{{item.title}}</h1>
+				<p class="wizard-body-text">{{item.description}}</p>
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+
+	<a class="button-flat waves-effect waves-light" ng-click="wizardController.onClick('onSkip', $event)">
+		{{wizardController.data.btnSkip}}
+	</a>
+
+	<a class="button-flat skip" ng-click="wizardController.changeSlide(1)" ng-show="wizardController.show('next')">
+		<i class="icon icon-chevron-right"></i>
+	</a>
+	<a class="button-flat skip" ng-show="wizardController.show('finish')" ng-click="wizardController.onClick('onFinish', $event)">
+		<i class="icon icon-chevron-right"></i>
+	</a>
+</ion-content>

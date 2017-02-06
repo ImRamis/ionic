@@ -1,0 +1,81 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  # Theme Players
+================================================*/
+.container-hearder-image {
+  @include background-size;
+  @include darkening-blend-mode;
+  height: 250px;
+  position: relative;
+  box-shadow: $box-shadow-z2;
+  z-index: 9;
+
+  .social {
+    padding: 15px;
+    position: relative;
+    z-index: 9;
+    color: theme-colors('textColors', 'accent', '');
+    font-size: icon-size('icon-small');
+  }
+
+  h1.parallax-title {
+    @include parallax-item( 'parallax-title');
+    padding: 130px 30px 0;
+    margin: 0;
+    position: relative;
+    z-index: 9;
+  }
+
+  .play-block {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    width: 100%;
+
+    .icon-medium {
+      color: theme-colors('textColors', 'accent');
+      font-size: icon-size('icon-medium');
+      line-height: 20px;
+      display: inline-block;
+      width: 60px;
+      position: relative;
+      z-index: 9;
+    }
+  }
+}
+/*  #Parallax Players Content
+===========================================*/
+.item-bcg {
+  min-height: 60px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-right: 90px;
+  @include item( 'item-bcg');
+
+  img {
+    border-radius: $border-radius !important;
+    top: 8px !important;
+    left: 8px !important;
+  }
+
+  .icon-medium {
+    @include icon( 'icon-medium');
+  }
+
+  .span-small{
+    position: absolute;
+    top: 18px;
+    right: 50px;
+    font-size: font-size-text('h5');
+    color: theme-colors('textColors', 'primary');
+    font-weight: normal;
+  }
+
+  h2.item-title {
+    @include item( 'item-title');
+  }
+
+  h3.item-subtitle {
+    @include item( 'item-subtitle');
+  }
+}

@@ -1,0 +1,52 @@
+/*  # Theme With Header
+===========================================*/
+.scroll,
+.slider {
+  height: 100%;
+  min-height: 100%; }
+
+.slider-slide {
+  display: table; }
+
+.slidertext {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 30px;
+  opacity: 0.5; }
+  .slidertext i.icon {
+    color: rgba(127, 202, 195, 0.6);
+    font-size: 180px; }
+
+.button-flat, .skip {
+  color: #7fcac3 !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 5px;
+  margin: 0 10px;
+  padding: 10px;
+  display: block; }
+
+.skip {
+  right: 0; }
+
+.slider-pager {
+  bottom: 26px;
+  height: 20px;
+  border-top: 1px solid #ffffff;
+  padding-top: 10px; }
+
+h1.wizard-title {
+  color: white;
+  font-size: 24px !important;
+  font-weight: bold;
+  margin-bottom: 15px; }
+
+p.wizard-body-text {
+  color: white;
+  font-size: 14px !important; }
+
+.ion-record:before {
+  color: #ffffff;
+  font-size: 7px; }

@@ -1,0 +1,96 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  # Profile Big Image
+===========================================*/
+.container-hearder-image {
+  @include darkening-blend-mode;
+  display: table;
+  width: 100%;
+  height: 15em;
+  z-index: 999;
+  position: relative;
+
+  .title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+
+    h1.parallax-title {
+      @include parallax-item( 'parallax-title');
+      margin: 0;
+    }
+
+    h2.parallax-subtitle {
+      @include parallax-item( 'parallax-subtitle');
+      margin-top: 0;
+    }
+  }
+}
+/*  # Profile Big Image
+===========================================*/
+.block-avatar {
+  position: relative;
+  padding: 10px;
+
+  .span-small {
+    @include span( 'span-small');
+  }
+
+  .icon-small {
+    @include icon( 'icon-small');
+    margin: 0;
+  }
+
+  .avatar {
+    height: 86px;
+    width: 86px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -43px;
+    margin-bottom: -20px;
+    z-index: 999;
+  }
+}
+/*  # Profile List
+===========================================*/
+.parallax-list {
+  .list {
+    margin-top: 40px;
+  }
+
+  .item {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  .card-bcg {
+    @include item-card( 'card-bcg');
+    margin: 0 20px !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+
+    .button-default {
+      @include button( 'button-default');
+      width: 32%;
+      padding: 0;
+    }
+
+    h2.card-title {
+      @include item-card( 'card-title');
+    }
+
+    h3.card-subtitle {
+      @include item-card( 'card-subtitle');
+    }
+
+    .item-image {
+      border-radius: $border-radius;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<!--Theme Wizard Simple + Icon -->
+<ion-content class="has-header container-background-full" scroll="false">
+	<ion-slide-box on-slide-changed="wizardController.slideHasChanged($index)">
+		<ion-slide class="text-center" ng-repeat="item in wizardController.data.items">
+			<div class="slidertext">
+				<i class="icon {{item.iconSlider}}"></i>
+				<h2 class="wizard-title">{{item.title}}</h2>
+				<p class="wizard-body-text">{{item.description}}</p>
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+	<a class="left button-flat" ng-click="wizardController.changeSlide(-1)"
+	ng-show="wizardController.show('prev')">{{wizardController.data.btnPrev}}</a>
+	<a class=" right button-flat" ng-click="wizardController.changeSlide(1)"
+	ng-show="wizardController.show('next')">{{wizardController.data.btnNext}}</a>
+	<a class="right button-flat" ng-click="wizardController.onClick('onFinish', $event)"
+	ng-show="wizardController.show('finish')">{{wizardController.data.btnFinish}}</a>
+</ion-content>

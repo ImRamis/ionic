@@ -1,0 +1,35 @@
+// Include Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Theme Subcategory 1 (Dogs)
+===========================================*/
+.gallery-title {
+  h2 {
+    &.item-title{
+      @include item('item-title');
+    }
+  }
+}
+.card.half {
+    width: 50%;
+    display: block;
+    float: left;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+}
+.card-image {
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+}
+.gallery-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(37, 37, 37, 0.5);
+    bottom: 0;
+    min-height: 45px;
+  }

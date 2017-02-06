@@ -1,0 +1,19 @@
+<!--Theme Wizard Big Image -->
+<ion-content  scroll="false">
+  <ion-slide-box on-slide-changed="wizardController.slideHasChanged($index)">
+    <ion-slide ng-repeat="item in wizardController.data.items">
+      <div class="slidertext text-center" style="background-image:url({{item.image}})">
+        <h1 class="wizard-title">{{item.title}}</h1>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+  <button class="button-default" ng-click="wizardController.changeSlide(1)"
+  ng-show="wizardController.show('next')">
+    {{wizardController.data.btnNext}}
+  </button>
+
+  <button class="button-default" ng-click="wizardController.onClick('onFinish', $event)"
+  ng-show="wizardController.show('finish')">
+    {{wizardController.data.btnFinish}}
+  </button>
+</ion-content>

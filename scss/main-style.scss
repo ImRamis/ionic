@@ -1,0 +1,559 @@
+//////////////////////////////////////////////////
+// GREEN LIGHT THEME
+
+//  Font Style
+//  Font sizes
+//  Global Colors
+//  Global Opacity
+//  Color Function
+//  Gradients
+//  Changing Background Images in Black&White Mode
+//  Blend Mode Colors
+//  Dividers Settings
+//  Border Radius
+//  Content Color Settings
+//  Shadows
+//  Icon Sizes
+//  Icon Settings
+//  Social Icons Color
+//  Span Settings
+//  LIST VIEWS - Header
+//  LIST VIEWS - Item Parameters
+//  LIST VIEWS - Subitem Parameters
+//  Badge with Icon Settings
+//  Button Settings
+//  Google Cards Settings
+//  Swipe Item
+//  Parallax Settings
+//  Text View Settings
+//  Footer Settings
+//  Checkbox
+//  Wizard Settings
+//  Input Field Settings
+//  Search Bar Settings
+//  Animations
+//  Background Sizes
+//  Default Overview Ionic
+//////////////////////////////////////////////////
+
+// Font Style
+$font-name: 'Roboto', sans-serif;
+$font-weight-value: 400 !default;
+
+// Font sizes
+$font-size-text:(
+  'h1': 36px,
+  'h2': 24px,
+  'h3': 18px,
+  'h4': 16px,
+  'h5': 14px,
+  'h6': 12px,
+  'p': 14px
+);
+@function font-size-text($key) {
+  @return map-get($font-size-text, $key);
+}
+
+
+// Global Colors
+$palettes: (
+    mainColors: (
+
+        primary:   #00887A, // Used for toolbars
+        secondary:  #81C784, // Used for various small elements
+        accent:   #00BEA4 //Used for icon-search-bar, loaders-spinners, checkbox-item, icon, button, span, input-field-icons
+    ),
+
+    backgrounds: ( // Used for card-bcg, swipe-item-bcg, form-block, search-bcg, text-view-bcg, footer-bcg
+
+        primary:   #F4F5F5, // Used for item-bcg
+        secondary:  #F9FAFA, // Used for subitem-bcg
+        accent:   #eeeeee
+    ),
+
+    textColors: ( // Used for text colors in all screens
+
+        primary: #7FCAC3, // Used for text colors in: item-title, item-subtitle, header-title, header-subtitle
+        secondary: #BDBCBC, // Used for text colors in: buttons, header-title, subitem-title, subitem-subtitle
+        accent:   #ffffff // Used for text colors in: header-title, header-subtitle
+    ),
+
+    blendModes: ( // Used for blend modes
+        primary:  #ffffff,
+        secondary: #424242,
+        accent:   #ef4437
+    )
+);
+
+// Global Opacity
+$global-opacity: (
+  'opacity0': 0,
+  'opacity10': 0.1,
+  'opacity20': 0.2,
+  'opacity30': 0.3,
+  'opacity40': 0.4,
+  'opacity50': 0.5,
+  'opacity60': 0.6,
+  'opacity70': 0.7,
+  'opacity80': 0.8,
+  'opacity90': 0.9,
+  'opacity100': 1
+);
+
+// Color function
+@function theme-colors($name: 'blendModes', $variant: 'primary', $opacity: 1) {
+  // Get the color spectrum
+  $color-spectrum: map-get($palettes, $name);
+  // Get the color variant
+  $color: map-get($color-spectrum, $variant);
+  // Get the alpha setting
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($global-opacity, $opacity));
+  // Set the alpha of the color
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+  @return $color;
+}
+
+// Gradients
+@mixin gradient-accent {
+background: #00bea4;
+background: -moz-linear-gradient(45deg,  #00bea4 0%, #81c784 100%);
+background: -webkit-linear-gradient(45deg,  #00bea4 0%,#81c784 100%);
+background: linear-gradient(45deg,  #00bea4 0%,#81c784 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 );
+
+}
+
+@mixin gradient-blende-mode {
+  background: #00bea4;
+  background: -moz-linear-gradient(45deg,  #00bea4 0%, #81c784 100%);
+  background: -webkit-linear-gradient(45deg,  #00bea4 0%,#81c784 100%);
+  background: linear-gradient(45deg,  #00bea4 0%,#81c784 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 );
+
+}
+
+// Changing Background Images in Black&White Mode
+@mixin black-white-mode {
+  background-color: theme-colors('blendModes', 'primary');
+  background-blend-mode: luminosity;
+}
+
+// Blend Mode Colors
+@mixin darkening-blend-mode {
+    background-color: theme-colors('blendModes', 'primary');
+    background-blend-mode: luminosity;
+     &::before {
+       content: "";
+       display: block;
+       height: 100%;
+       width: 100%;
+       top: 0;
+       left: 0;
+       position: absolute;
+       pointer-events: none;
+       mix-blend-mode: multiply;
+       opacity: 0.5;
+       @include gradient-blende-mode;
+     }
+}
+@mixin images {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+// Divider Settings
+$item-divider-small: 1px solid theme-colors('mainColors', 'accent');
+$item-divider-medium: 2px solid theme-colors('mainColors', 'secondary');
+$item-divider-large: 4px solid theme-colors('mainColors', 'secondary');
+
+// Border Radius
+$border-radius: 4px;
+
+// Content Color Settings
+$content-bcg: theme-colors('backgrounds', 'accent');
+
+// Shadows
+$box-shadow-z1: 0 2px 10px rgba(0, 0, 0, 0.2);
+$box-shadow-z2: 0 4px 10px rgba(0, 0, 0, 0.2);
+$box-shadow-z3: 0 6px 10px rgba(0, 0, 0, 0.2);
+
+
+
+// Icon Sizes
+$icon-size:(
+  'icon-small': 20px,
+  'icon-medium': 24px,
+  'icon-large': 60px
+);
+@function icon-size($key: 'icon-small') {
+  @return map-get($icon-size, $key);
+}
+
+// Icon Settings
+@mixin icon($icon-item) {
+  @if $icon-item== "icon-small" {
+    color: theme-colors('mainColors', 'accent') !important;
+    font-size: icon-size('icon-small') !important;
+  }
+  @if $icon-item== "icon-medium" {
+    color: theme-colors('mainColors', 'accent') !important;
+    font-size: icon-size('icon-medium') !important;
+  }
+  @if $icon-item== "icon-large" {
+    color: theme-colors('mainColors', 'accent') !important;
+    font-size: icon-size('icon-large') !important;
+  }
+}
+
+//  Social Icons Color
+@mixin social {
+   @if &{
+    i.icon {
+      color: theme-colors('mainColors', 'secondary', 'opacity50');
+      font-size: icon-size('icon-small');
+      width: 35px;
+      display: inline-block;
+    }
+  }
+}
+
+// Span Settings
+@mixin span($span-item) {
+  @if $span-item== "span-small" {
+    color: theme-colors('mainColors', 'accent');
+    font-size: font-size-text('h6');
+  }
+  @else if $span-item== "span-medium" {
+    color: theme-colors('mainColors', 'accent');
+    font-size: font-size-text('h3');
+  }
+  @else if$span-item== "span-large" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h1');
+    line-height: normal;
+  }
+}
+
+// LIST VIEWS - Header
+@mixin header($header) {
+  @if $header== "header-title" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h2');
+    font-weight: bold;
+  }
+  @else if $header== "header-subtitle" {
+    color: theme-colors('textColors', 'accent', 'opacity60');
+    font-size: font-size-text('p');
+  }
+  @else if $header== "header-bcg" {
+    @include gradient-accent;
+    box-shadow: $box-shadow-z1;
+  }
+  @else if $header== "header-divider" {
+        @include gradient-accent;
+        box-shadow: $box-shadow-z1;
+        border: 1px solid transparent;
+  }
+}
+
+// LIST VIEWS - Item Parameters
+@mixin item($item) {
+  @if $item== "item-title" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('h5');
+  }
+  @else if $item== "item-subtitle" {
+    color: theme-colors('textColors', 'secondary');
+    font-size: font-size-text('h5');
+  }
+  @else if $item== "item-body-text" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('p');
+  }
+  @else if $item== "item-bcg" {
+    background-color: theme-colors('backgrounds', 'primary', 'opacity80')!important;
+    border-width: 0;
+    margin: 0;
+    transition: all 0s ease-out;
+  }
+}
+
+// LIST VIEWS - Subitem Parameters
+@mixin subitem($subitem) {
+  @if $subitem== "subitem-title" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('h5');
+    line-height: normal;
+  }
+  @else if $subitem== "subitem-subtitle" {
+    color: theme-colors('textColors', 'secondary', 'opacity60');
+    font-size: font-size-text('h5');
+  }
+  @else if $subitem== "subitem-bcg" {
+    background-color: theme-colors('backgrounds', 'secondary') !important;
+    border-width: 0;
+    margin: 0;
+  }
+}
+
+// Badge with Icon Settings
+@mixin badge($badge){
+  @if $badge=="badge-small"{
+      background-color: theme-colors('mainColors', 'accent')!important;
+      color: theme-colors('textColors', 'accent');
+      border-radius: $border-radius;
+      padding: 3px 6px;
+      font-size: font-size-text('h5');
+  }
+  @else if $badge=="badge-medium"{
+      background-color: theme-colors('mainColors', 'accent')!important;
+      color: theme-colors('textColors', 'accent');
+      border-radius: $border-radius;
+      padding: 5px 8px;
+      font-size: font-size-text('h2');
+  }
+  @else if $badge=="badge-large"{
+      background-color: theme-colors('mainColors', 'accent')!important;
+      color: theme-colors('textColors', 'accent');
+      border-radius: $border-radius;
+      padding: 7px 10px;
+      font-size: font-size-text('h1');
+  }
+}
+
+// Button Settings
+@mixin button($button) {
+  @if $button== "button-default" {
+    background-color: theme-colors('mainColors', 'secondary') !important;
+    color: theme-colors('textColors', 'accent') !important;
+    font-size: font-size-text('h5');
+    font-weight: 500;
+    border-radius: $border-radius;
+  }
+  @else if $button== "button-flat" {
+    color: theme-colors('textColors', 'primary') !important;
+    font-size: font-size-text('h5');
+    font-weight: 500;
+    border-radius: $border-radius;
+  }
+}
+
+//Google Cards Settings
+@mixin item-card($item-card) {
+  @if $item-card== "card-title" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('h2') !important;
+    font-weight: bold !important;
+  }
+  @else if $item-card== "card-subtitle" {
+    color: theme-colors('textColors', 'secondary') !important;
+    font-size: font-size-text('h5');
+  }
+  @else if $item-card== "card-body-text" {
+    color: theme-colors('textColors', 'secondary') !important;
+    font-size: font-size-text('h5');
+  }
+  @else if $item-card== "card-bcg" {
+    background-color: theme-colors('backgrounds', 'primary', 'opacity80') !important;
+    box-shadow: $box-shadow-z1;
+  }
+}
+
+// Swipe Item
+@mixin swiped-item($swiped-item) {
+  @if $swiped-item== "swiped-item-bcg" {
+    background-color: theme-colors('backgrounds', 'primary')!important;
+    i.icon {
+      font-size: icon-size('icon-medium') !important;
+      color: theme-colors('mainColors', 'accent');
+    }
+    .swiped-item-title {
+      color: theme-colors('textColors', 'primary');
+      font-size: font-size-text('h5') !important;
+    }
+  }
+}
+
+// Parallax Settings
+@mixin parallax-item($parallax-item) {
+  @if $parallax-item== "parallax-title" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h1') !important;
+    font-weight: bold;
+  }
+  @else if $parallax-item== "parallax-subtitle" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h5') !important;
+    font-weight: 300;
+  }
+}
+
+// Text View Settings
+@mixin text-view($text-view){
+  @if $text-view== "text-view-title" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('h1') !important;
+  }
+  @else if $text-view== "text-view-subtitle" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('p') !important;
+  }
+  @else if $text-view== "text-view-body" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('p') !important;
+  }
+  @else if $text-view== "text-view-icon" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('p') !important;
+  }
+  @else if $text-view== "text-view-bcg"{
+    background-color: theme-colors('backgrounds', 'primary', 'opacity60') !important;
+  }
+}
+
+// Footer Settings
+@mixin footer-item($footer-item) {
+  @if $footer-item== "footer-title" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h2') !important;
+    font-weight: bold;
+    line-height: normal !important;
+  }
+  @else if $footer-item== "footer-subtitle" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h5') !important;
+    line-height: normal !important;
+  }
+  @else if $footer-item== "footer-bcg" {
+    background-color: theme-colors('mainColors', 'primary');
+  }
+}
+
+// Checkbox
+@mixin checkbox-item($checkbox-item) {
+  @if $checkbox-item== "input[type="checkbox"]" {
+    &.filled-in:checked + label:after {
+      border: 2px solid theme-colors('mainColors', 'accent');
+      background-color: theme-colors('mainColors', 'accent');
+    }
+    &.filled-in:not(:checked) + label:after {
+      border: 2px solid theme-colors('mainColors', 'accent') !important;
+    }
+    &.filled-in:checked + label:before {
+      border-right: 2px solid theme-colors('mainColors', 'primary');
+      border-bottom: 2px solid theme-colors('mainColors', 'primary');
+    }
+  }
+}
+
+// Wizard Setting
+@mixin wizard($wizard) {
+  @if $wizard=="wizard-bcg" {
+    background-color: theme-colors('mainColors', 'accent');
+  }
+  @else if $wizard=="wizard-title" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h2') !important;
+    font-weight: bold;
+  }
+  @else if $wizard=="wizard-body-text" {
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h5') !important;
+  }
+}
+
+// Input Field Settings
+@mixin input-item($input-item) {
+  @if $input-item== "input" {
+    font-size: font-size-text('h5');
+    color: theme-colors('textColors', 'primary');
+    border-bottom: 1px solid theme-colors('textColors', 'primary') !important;
+    font-weight: 300;
+    &:focus:not([readonly]){
+      color: theme-colors('textColors', 'primary');
+      box-shadow: none;
+    }
+    & + label{
+      color: theme-colors('textColors', 'primary');
+      font-size: font-size-text('h5');
+      left: 0;
+      top: 11px;
+      &.active {
+        color: theme-colors('textColors', 'primary', 'opacity60') !important;
+        font-size: font-size-text('h5');
+      }
+    }
+  }
+  @else if $input-item== "form-block"{
+    background-color: theme-colors('textColors', 'accent') !important;
+  }
+}
+
+// Search Bar Settings
+@mixin search($search){
+  @if $search== "search-title" {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('h2') !important;
+    font-weight: bold;
+  }
+  @else if $search== "search-bcg"{
+    background-color: theme-colors('backgrounds', 'primary', 'opacity30')!important;
+  }
+  @else if $search== "search-bar-bcg"{
+    background-color: theme-colors('mainColors', 'primary');
+  }
+  @else if $search== "search-bar-title"{
+    color: theme-colors('textColors', 'accent');
+    font-size: font-size-text('h2') !important;
+    font-weight: bold;
+  }
+  @else if $search== "[type="search"]" {
+    font-size: font-size-text('h5');
+    color: theme-colors('textColors', 'accent');
+    height: 30px;
+    border-bottom: 1px solid theme-colors('textColors', 'accent') !important;
+    &::-webkit-input-placeholder {
+      font-size: font-size-text('h5');
+      color: theme-colors('textColors', 'accent');
+    }
+    &:focus:not([readonly]){
+      color: theme-colors('textColors', 'accent');
+      font-size: font-size-text('h5');
+      box-shadow: none;
+    }
+  }
+}
+
+//Animations
+@mixin animation {
+  -webkit-animation: fadeInRight 500ms;
+  -moz-animation: fadeInRight 500ms;
+  -o-animation: fadeInRight 500ms;
+  animation: fadeInRight 500ms;
+}
+
+//Background Sizes
+@mixin background-size {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+//Default Overview Ionic
+@mixin toolBar {
+  background-color: theme-colors('mainColors', 'primary') !important;
+  height: 56px;
+  padding: 10px 0;
+  box-shadow: $box-shadow-z2;
+  border: none;
+}
+@mixin toolBar-title {
+  color: theme-colors('textColors', 'accent');
+  font-size: font-size-text('h2');
+  padding-top: 5px;
+  left: 40px !important;
+  text-align: left;
+  font-weight: bold;
+}
+$bar-height: 56px;

@@ -1,0 +1,14 @@
+<!--Theme Simple header with simple list-->
+<ion-content class="left-menu-background center padding">
+    <ion-refresher pulling-text="Get Handyman" on-refresh="init();">
+    </ion-refresher>
+    <!--Simple header with simple list Divider-->
+    <ion-list> 
+        <!--Simple header with simple list Content-->
+        <ion-item ng-click="profile(item.HANDYMANID)" class="item-avatar-left item-icon-right waves-effect waves-light btn" ng-repeat="item in handy">
+            <img ng-src="{{item.IMAGE}}"  alt="" />
+            <span class="item-title span-small"><span>{{item.FIRSTNAME}}</span> <span>{{item.MIDDLENAME}}</span> <span>{{item.LASTNAME}}</span></span>
+            <a ng-href="tel: {{item.MOBILEPHONE | tel}}"> <i class="icon ion-ios-telephone small "> </i></a>
+        </ion-item>
+    </ion-list>
+</ion-content>

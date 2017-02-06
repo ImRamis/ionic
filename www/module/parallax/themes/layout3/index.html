@@ -1,0 +1,48 @@
+<!---Theme Profile Big Image-->
+<ion-content delegate-handle="scroller" elastic-header="elastic-header" class="has-header container-background-full">
+  <!--- Parallax Header -->
+  <div id="elastic-header" class="container-hearder-image">
+    <div class="title">
+      <h1 class="parallax-title">{{parallaxController.data.title}}</h1>
+      <h2 class="parallax-subtitle">{{parallaxController.data.description}}</h2>
+    </div>
+  </div>
+  <!--- Parallax Avatar -->
+  <div class="block-avatar">
+    <i class="icon-small icon {{parallaxController.data.iconFriends}} left"></i>
+    <span class="span-small left">{{parallaxController.data.friends}}</span>
+    <img class="avatar" ng-src="{{parallaxController.data.avatar}}" alt="{{parallaxController.data.avatarAlt}}" />
+    <span class="span-small right">{{parallaxController.data.duration}}</span>
+    <i class="icon-small icon {{parallaxController.data.iconDuration}} right"></i>
+  </div>
+  <!--- Parallax Content -->
+  <ion-list class="parallax-list">
+    <div class="card transparent" ng-repeat="item in parallaxController.data.items">
+      <!--- Parallax Card Avatar -->
+      <ion-item class="card-bcg item-avatar">
+        <img ng-src="{{item.avatar}}" alt="{{item.avatarAlt}}">
+        <h2 class="card-title">{{item.name}}</h2>
+        <h3 class="card-subtitle">{{item.duration}}</h3>
+      </ion-item>
+      <!--- Parallax Card Images -->
+      <ion-item class="item-image">
+        <img ng-src="{{item.image}}">
+      </ion-item>
+      <!--- Parallax Card Buttons -->
+      <ion-item class="card-bcg">
+        <button class="btn button-default disabled waves-effect waves-grey"
+          ng-click="parallaxController.onClick('onLike', item, $event)">
+          {{item.like}}
+        </button>
+        <button class="btn button-default disabled waves-effect waves-grey"
+          ng-click="parallaxController.onClick('onShare', item, $event)">
+          {{item.share}}
+        </button>
+        <button class="btn button-default disabled waves-effect waves-grey"
+          ng-click="parallaxController.onClick('onBuy', item, $event)">
+          {{item.buy}}
+        </button>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

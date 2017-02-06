@@ -1,0 +1,51 @@
+// #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Theme Category 1 (Animals)
+===========================================*/
+.gallery-title i.icon {
+    color: theme-colors('textColors', 'primary');
+    font-size: icon-size('icon-small');
+    right: 0px;
+}
+.gallery-title {
+  h2 {
+    &.item-title {
+      @include item('item-title');
+    }
+  }
+  p {
+    &.item-subtitle {
+      @include item('item-subtitle');
+    }
+  }
+}
+
+.card.half {
+    width: 50%;
+    display: block;
+    float: left;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+}
+.card-image {
+    height: 140px;
+    margin: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+}
+.gallery-title.item {
+    padding-right: 40px;
+}
+.gallery-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(37, 37, 37, 0.5)!important;
+    bottom: 0;
+    min-height: 45px;
+    border-bottom: 1px solid transparent !important;
+}

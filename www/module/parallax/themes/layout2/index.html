@@ -1,0 +1,30 @@
+<!--- Theme Parallax Product -->
+<ion-content delegate-handle="scroller" elastic-header="elastic-header" class="has-header container-background-full">
+  <div id="elastic-header" class="container-hearder-image">
+    <div class="title">
+      <h2 class="parallax-subtitle">{{parallaxController.data.title}}</h2>
+      <h1 class="parallax-title">{{parallaxController.data.description}}</h1>
+    </div>
+    <!-- Parallax Product  Social-->
+    <div class="social">
+      <i class="icon {{parallaxController.data.iconShare}} right"
+      ng-click="parallaxController.onClick('onShare', item, $event)"></i>
+      <i class="icon {{parallaxController.data.iconFavorite}} right"
+      ng-click="parallaxController.onClick('onFavorite', item, $event)"></i>
+      <i class="icon {{parallaxController.data.iconLike}} right"
+      ng-click="parallaxController.onClick('onLike', item, $event)"></i>
+    </div>
+  </div>
+  <!-- Parallax Product  List-->
+  <ion-list>
+    <ion-item class="item item-bcg item-text-wrap item-thumbnail-left"
+    ng-click="parallaxController.onClick('onItemClick', item, $event)"
+    ng-repeat="item in parallaxController.data.items">
+      <img ng-src="{{item.image}}" alt="{{item.title}}" />
+      <h2 class="item-title">{{item.title}}</h2>
+      <h3 class="item-subtitle">{{item.description}}</h3>
+      <div class="span-small old-price right">{{item.oldPrice}}</div>
+      <div class="span-medium new-price right">{{item.newPrice}}</div>
+    </ion-item>
+  </ion-list>
+</ion-content>

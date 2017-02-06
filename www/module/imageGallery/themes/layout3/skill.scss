@@ -1,0 +1,45 @@
+// #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Theme Category 2 (Music)
+===========================================*/
+.gallery-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  background-color: rgba(37, 37, 37, 0.5);
+  min-height: 45px;
+  border-bottom: 1px solid transparent !important;
+    h2 {
+      &.item-title{
+        @include item('item-title');
+      }
+    }
+    p {
+      &.item-subtitle{
+        @include item('item-subtitle');
+      }
+    }
+    i.icon {
+      color: theme-colors('textColors', 'primary');
+      font-size: icon-size('icon-small');
+      right: 0px;
+    }
+}
+
+.card.half {
+    width: 50%;
+    display: block;
+    float: left;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+}
+.card-image {
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+}

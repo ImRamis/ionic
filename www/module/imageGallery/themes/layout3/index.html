@@ -1,0 +1,20 @@
+<!-- Image Gallery Category 2 (Music)-->
+<ion-content class="has-header container-background-full">
+  <ion-list>
+    <!-- Image Gallery Card-->
+    <div class="card half" ng-repeat="item in imageGalleryController.data.items"
+    ng-click="imageGalleryController.onClick(item, 'open')">
+      <div class="waves-effect waves-block waves-dark card-image"
+      style="background-image: url({{item.image}});">
+        <ion-item class="gallery-title item-icon-right">
+          <h2 class="item-title">{{item.title}}</h2>
+          <p class="item-subtitle">{{item.items ? item.items.length : 0}} image(s)</p>
+          <i ng-if="item.favorite == true" class="icon icon-heart"
+          ng-click="imageGalleryController.onClick(item, 'onFavorite', $event)"></i>
+          <i ng-if="item.favorite == false" class="icon icon-heart-outline"
+          ng-click="imageGalleryController.onClick(item, 'onFavorite', $event)"></i>
+        </ion-item>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

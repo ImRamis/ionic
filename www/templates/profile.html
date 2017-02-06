@@ -1,0 +1,64 @@
+<style>
+    .chat-item.ng-enter {
+    -webkit-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
+                        }
+.chat-item.ng-enter-stagger {
+  -webkit-animation-delay:300ms;
+  animation-delay:200ms;
+
+  -webkit-animation-duration:0;
+  animation-duration:0;
+                            }
+</style>
+
+
+
+
+<!---Theme Profile Big Image-->
+<ion-content delegate-handle="scroller" elastic-header="elastic-header" class=" container-background-full" ng-init="init();">
+
+    <!--- Parallax Header -->
+    <div>
+        <div id="elastic-header" class="container-hearder-image" style="background-image: url('img/avatar/0.jpg')">
+            <div class="title">
+                <h1 class="parallax-title">{{handyman[0].FIRSTNAME}} {{handyman[0].MIDDLENAME}} {{handyman[0].LASTNAME}}</h1>
+                <h2 class="parallax-subtitle">{{handyman[0].SHOPNAME}}</h2>
+            </div>
+        </div>
+        <!--- Parallax Avatar -->
+        <div class="block-avatar">
+            <i class="icon-small icon"></i>
+            <span class="span-small left"> </span><!-- email-->
+            <img class="avatar" src="img/avatar/0.jpg" />
+            <span class="span-small right"></span> <!-- rate-->
+            <i class="icon-small icon right"></i>
+        </div>
+        <ion-list class="Parallax parallax-list ">
+            <ion-item class=" card transparent card-bcg">
+                <span class=" span-small left">Phone </span>
+                <span class="right">
+                    <a ng-href="tel: {{handyman[0].MOBILEPHONE | tel}}">{{handyman[0].MOBILEPHONE}}</a>
+                </span>
+            </ion-item>
+            <ion-item class=" card transparent card-bcg">
+                <span class=" span-small left">Alt-Phone </span>
+                <span class="span-small right"><a ng-href="tel: {{handyman[0].ALTERNATEPHONE | tel}}">{{handyman[0].ALTERNATEPHONE}}</a></span>
+            </ion-item>
+            <ion-item class=" card transparent card-bcg">
+                <span class=" span-small left">Shop Contact Number</span>
+                <span class="span-small right"><a ng-href="tel: {{handyman[0].SHOPCONTACTPERSON | tel}}">{{handyman[0].SHOPCONTACTPERSON}}</a></span>
+            </ion-item>
+        </ion-list>
+        <!--- Parallax Content -->
+        <ion-list class="parallax-list">
+            <div class="card ">
+                <!--- Parallax Card Avatar -->
+                <ion-item class="card-bcg chat-item " ng-repeat="(key,value) in handyman | groupBy: 'SKILL'">
+                    <span class="card-title span-small left">{{key}}</span>
+                </ion-item>
+
+            </div>
+        </ion-list>
+    </div>
+</ion-content>

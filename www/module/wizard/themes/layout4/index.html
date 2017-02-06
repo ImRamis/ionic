@@ -1,0 +1,19 @@
+<!--Theme With Header -->
+<ion-content class="has-header background-color">
+  <ion-slide-box>
+    <ion-slide ng-repeat="item in wizardController.data.items">
+      <div class="slidertext">
+        <img src="{{item.image}}">
+      </div>
+      </div>
+      <div class="wizard-travel-description text-center">
+        <h1 class="wizard-title">{{item.title}}</h1>
+        <p class="wizard-body-text">{{item.description}}</p>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+  <button class="button-default waves-effect waves-light waves-block btn"
+  ng-click="wizardController.onClick('onSignIn', $event)">
+    {{wizardController.data.btnSignIn}}
+  </button>
+</ion-content>

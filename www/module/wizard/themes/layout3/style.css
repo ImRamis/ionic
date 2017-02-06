@@ -1,0 +1,71 @@
+/*  #Thema Big Image + Text
+===========================================*/
+.scroll {
+  height: 100%;
+  min-height: 100%; }
+
+.slider {
+  height: 100%; }
+
+.container-background {
+  position: relative;
+  background-color: white;
+  background-blend-mode: luminosity; }
+  .container-background::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    background: #00bea4;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+  .container-background .description {
+    width: 80%;
+    margin: 0 auto;
+    z-index: 9;
+    position: relative; }
+
+h2.wizard-title {
+  color: white;
+  font-size: 24px !important;
+  font-weight: bold;
+  margin-top: 80px; }
+
+p.wizard-body-text {
+  color: white;
+  font-size: 14px !important; }
+
+.bottom.button-flat {
+  color: #7fcac3 !important;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  min-width: 120px;
+  bottom: 15px;
+  padding: 10px; }
+
+.slider-pager {
+  bottom: 70px; }
+  .slider-pager .ion-record:before {
+    font-family: 'Fontello';
+    content: "\e8b2";
+    color: white; }
+  .slider-pager .button-flat {
+    color: #7fcac3 !important;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px; }

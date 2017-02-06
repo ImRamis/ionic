@@ -1,0 +1,131 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #General Parallax Swiper
+===========================================*/
+.scroll,
+.slider {
+  height: 100% !important;
+}
+
+#elastic-header {
+  height: 270px;
+  -webkit-transition: height 150ms;
+  /* Safari */
+  transition: height 150ms;
+
+  .slider-pager {
+    z-index: 99999;
+
+    .slider-pager-page {
+      color: #565656;
+    }
+  }
+}
+
+.container-hearder-image {
+  position: relative;
+  z-index: 999;
+
+  .box {
+    height: 100%;
+    @include background-size;
+    z-index: 99999;
+    position: relative;
+  }
+
+  h1.parallax-title {
+    font-size: font-size-text('h1');
+    color: theme-colors('textColors', 'primary');
+    font-weight: bold;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+  }
+}
+
+.text-view-bcg {
+  box-shadow: none;
+  margin: 0;
+  overflow: visible;
+}
+
+.button-default {
+  @include button( 'button-default');
+  margin-bottom: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+/*  #Parallax Content
+===========================================*/
+.text-view-bcg {
+  @include text-view( 'text-view-bcg');
+
+  .text-view-bcg-top {
+    padding: 10px;
+    display: table;
+
+    .half {
+      display: table-cell;
+    }
+
+    .span-large {
+      font-size: font-size-text('h1');
+      color: theme-colors('textColors', 'primary');
+      display: block;
+      clear: both;
+      margin: 10px 0;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .social {
+      @include social;
+      padding-top: 5px;
+      display: block;
+      padding-left: 5px;
+    }
+
+    .review-block {
+      position: absolute;
+      right: 40px;
+      font-size: 10px;
+      text-align: left;
+
+      .review {
+        clear: both;
+        display: block;
+
+        .icon-small {
+          @include icon( 'icon-small');
+        }
+
+        .span-small {
+          @include span( 'span-small');
+        }
+      }
+    }
+  }
+}
+
+.item-text-wrap {
+  padding: 10px 0;
+  border-top: 1px solid rgba(221, 221, 221, 0.50);
+  margin: 10px 40px;
+
+  p.text-view-body {
+    @include text-view( 'text-view-body');
+    margin-bottom: 0;
+    padding-bottom: 5px;
+  }
+
+  .info-text {
+    margin-bottom: 5px;
+  }
+
+  .info-text > p:first-child {
+    font-weight: bold;
+    float: left;
+    padding-bottom: 0;
+    margin-right: 5px;
+  }
+}

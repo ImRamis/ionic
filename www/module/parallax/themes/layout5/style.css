@@ -1,0 +1,62 @@
+/*  #Theme Parallax Basic
+===========================================*/
+.container-hearder-image {
+  background-color: white;
+  background-blend-mode: luminosity;
+  height: 250px;
+  position: relative;
+  z-index: 9999; }
+  .container-hearder-image::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    background: #00bea4;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+  .container-hearder-image h1.parallax-title {
+    color: white;
+    font-size: 36px !important;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%; }
+  .container-hearder-image .avatar {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -32px; }
+
+.item-bcg {
+  padding-top: 25px;
+  background-color: rgba(244, 245, 245, 0.8) !important;
+  border-width: 0;
+  margin: 0;
+  transition: all 0s ease-out; }
+  .item-bcg .item-title {
+    color: #7fcac3;
+    font-size: 14px; }
+  .item-bcg .item-subtitle {
+    color: #bdbcbc;
+    font-size: 14px; }
+  .item-bcg .icon-small {
+    color: #00bea4 !important;
+    font-size: 20px !important; }

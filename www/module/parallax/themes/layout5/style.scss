@@ -1,0 +1,46 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Theme Parallax Basic
+===========================================*/
+.container-hearder-image {
+  @include darkening-blend-mode;
+  height: 250px;
+  position: relative;
+  z-index: 9999;
+
+  h1.parallax-title {
+    @include parallax-item( 'parallax-title');
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+  }
+}
+
+.item-bcg {
+  padding-top: 25px;
+  @include item( 'item-bcg');
+
+  .item-title {
+    @include item( 'item-title');
+  }
+
+  .item-subtitle {
+    @include item( 'item-subtitle');
+  }
+
+  .icon-small {
+    @include icon( 'icon-small');
+  }
+}

@@ -1,0 +1,14 @@
+<!-- Image Gallery Category 2 (Music)-->
+<ion-content class="has-header container-background-full">
+  <ion-list>
+    <!-- Image Gallery Card-->
+    <div class="card half" ng-repeat="item in imageGalleryController.subitems">
+      <div class="waves-effect waves-block waves-dark card-image"
+      style="background-image: url({{item.image}});">
+        <ion-item class="gallery-title" ng-if="item.title">
+          <h2 class="item-title">{{item.title}}</h2>
+        </ion-item>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

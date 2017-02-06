@@ -1,0 +1,64 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Thema Big Image
+===========================================*/
+.slider {
+  height: 92%;
+}
+
+.scroll {
+  height: 100%;
+  min-height: 100%;
+}
+
+h1.wizard-title {
+  @include wizard( 'wizard-title');
+  z-index: 9;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.slider-pager {
+  bottom: 35px;
+
+  .ion-record:before {
+    font-family: 'Fontello';
+    content: "\e9b6";
+    color: theme-colors('mainColors', 'primary') !important;
+  }
+}
+
+.button-default {
+  @include button( 'button-default');
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  border-radius: $border-radius;
+  border-width: 0;
+  padding: 15px 0;
+  text-transform: uppercase;
+  margin-top: -15px;
+}
+
+.slidertext {
+  background-size: cover;
+  height: 85%;
+  margin: 5% auto;
+  display: table;
+  width: 90%;
+  border-radius: $border-radius;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    top: 0;
+    @include gradient-accent;
+  }
+}

@@ -1,0 +1,40 @@
+<style>
+    .fade.ng-enter {
+        animation: fader 0.8s linear;
+    }
+    
+    @keyframes fader {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+<ion-view class="left-menu-background center padding ">
+    <ion-content>
+        <img class=" item-body padding full-image" ng-src="img\login-shop.png" alt="not available">
+        <div class="list padding fade ng-enter">
+            <label class="item item-input btn">
+    <div class=" input-label ">Region</div>
+    <select  ng-model="search.region"   ng-change="search.subregion = invalid" ng-init="search.region = invalid; search.subregion = invalid;">
+      <option  disabled>{{invalid}}</option>
+      <option  ng-repeat="item in region" value="{{item.ID}}"> {{item.REGION}} </option>
+    </select>
+ </label>
+        </div>
+        <div class="list padding fade ng-enter" ng-if="search.region != invalid">
+            <label class="item item-input btn">
+        <div class="input-label">Sub-region</div>
+        <select ng-model="search.subregion">
+        <option  disabled>{{invalid}}</option>
+        <option  ng-repeat="item in subregion | filter:{REGIONID: search.region}" value="{{item.ID}}"> {{item.AREA}} </option>
+        </select>
+  </label>
+        </div>
+        <div class="list padding fade ng-enter " ng-if="search.region && search.subregion != invalid">
+            <button class="btn waves-effect waves-dark ng-binding ng-enter fade button-block" ng-click="saveLocation(search);">Continue</button>
+        </div>
+    </ion-content>
+</ion-view>

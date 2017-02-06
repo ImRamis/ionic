@@ -1,0 +1,65 @@
+/*  #Thema Down + fade in + Ken Burns
+===========================================*/
+#splash-background-image .splash-screen {
+  animation: splashScreen 40s ease infinite;
+  -ms-animation: splashScreen 40s ease infinite;
+  -webkit-animation: splashScreen 40s ease infinite;
+  -o-animation: splashScreen 40s ease infinite;
+  -moz-animation: splashScreen 40s ease infinite;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0; }
+
+@keyframes splashScreen {
+  0%, 100% {
+    transform: scale(1.5, 1.5) translate(20px, 20px); }
+  25% {
+    transform: scale(1.8, 1.8) translate(50px, 50px); }
+  50% {
+    transform: scale(1.6, 1.6) translate(60px, 90px); }
+  75% {
+    transform: scale(2, 2) translate(10px, 10px); } }
+
+.logo-down {
+  max-width: 100px;
+  position: relative;
+  margin-top: 40% !important;
+  left: 50%;
+  -webkit-animation: fadeInDown 5s;
+  /* Safari 4+ */
+  -moz-animation: fadeInDown 5s;
+  /* Fx 5+ */
+  -o-animation: fadeInDown 5s;
+  /* Opera 12+ */
+  animation: fadeInDown 5s;
+  /* IE 10+, Fx 29+ */ }
+
+.item-fade-in h2 {
+  position: relative;
+  color: #00887a !important;
+  font-size: 36px;
+  margin-top: 10px;
+  text-align: center;
+  animation: zoomIn 5s;
+  -webkit-animation: zoomIn 5s; }
+
+@keyframes buttons {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.button-fade-in {
+  animation-name: buttons;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  
+  visibility: hidden;
+}

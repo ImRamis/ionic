@@ -1,0 +1,46 @@
+<!--- Theme Parallax Location Details -->
+<ion-content delegate-handle="scroller" elastic-header="elastic-header" class="has-header container-background-full">
+  <!--- Parallax Header -->
+  <div id="elastic-header" class="container-hearder-image"></div>
+  <!--- Parallax Content -->
+  <ion-list>
+    <div class="text-view-bcg">
+      <!--- Parallx Social -->
+      <div class="text-top">
+        <span class="socila">
+          <i class="icon {{parallaxController.data.iconLike}}"
+            ng-click="parallaxController.onClick('onLike', null, $event)"></i>
+          <i class="icon {{parallaxController.data.iconFavorite}}"
+              ng-click="parallaxController.onClick('onFavorite', null, $event)"></i>
+          <i class="icon  {{parallaxController.data.iconShare}}"
+              ng-click="parallaxController.onClick('onShare', null, $event)"></i>
+        </span>
+        <h1 class="text-view-title">Joe’s restaurant</h1>
+      </div>
+      <!--- Parallx Rate -->
+      <div class="text-rate">
+        <span class="rate-star">
+          <i class="icon-small icon" ng-class="parallaxController.starClass(star)"
+          ng-repeat="star in parallaxController.data.iconsStar"
+          ng-click="parallaxController.onClick('onRates', $index, $event)"></i>
+        </span>
+        <span class="span-small reviews">{{parallaxController.data.reviews}}</span>
+      </div>
+      <!--- Parallx Block Content -->
+      <div class="item-content item-text-wrap">
+        <p class="text-view-body">{{parallaxController.data.description}}</p>
+      </div>
+      <!--- Parallx Block Content -->
+      <div class="item-content item-text-wrap">
+        <div class="info-text" ng-repeat="item in parallaxController.data.items">
+          <p class="text-view-body">{{item.name}}</p>
+          <p class="text-view-body">{{item.value}}</p>
+        </div>
+      </div>
+      <!--- Parallx Block Content -->
+      <div class="item-content item-text-wrap">
+        <p class="text-view-body">{{parallaxController.data.description2}}</p>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

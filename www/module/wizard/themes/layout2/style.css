@@ -1,0 +1,62 @@
+/*  #Thema Big Image
+===========================================*/
+.slider {
+  height: 92%; }
+
+.scroll {
+  height: 100%;
+  min-height: 100%; }
+
+h1.wizard-title {
+  color: white;
+  font-size: 24px !important;
+  font-weight: bold;
+  z-index: 9;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle; }
+
+.slider-pager {
+  bottom: 35px; }
+  .slider-pager .ion-record:before {
+    font-family: 'Fontello';
+    content: "\e9b6";
+    color: #00887a !important; }
+
+.button-default {
+  background-color: #81c784 !important;
+  color: white !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 4px;
+  border-width: 0;
+  padding: 15px 0;
+  text-transform: uppercase;
+  margin-top: -15px; }
+
+.slidertext {
+  background-size: cover;
+  height: 85%;
+  margin: 5% auto;
+  display: table;
+  width: 90%;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden; }
+  .slidertext::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    top: 0;
+    background: #00bea4;
+    background: -moz-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    background: -webkit-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    background: linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 ); }

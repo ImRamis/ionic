@@ -1,0 +1,83 @@
+/*  #Theme Parallax Location Details
+===========================================*/
+.container-hearder-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-blend-mode: luminosity;
+  z-index: 999;
+  position: relative; }
+  .container-hearder-image::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    background: #00bea4;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00bea4 0%, #81c784 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+
+.text-view-bcg {
+  background-color: rgba(244, 245, 245, 0.6) !important;
+  margin: 0;
+  overflow: visible; }
+  .text-view-bcg .socila i.icon {
+    color: rgba(129, 199, 132, 0.5);
+    font-size: 20px;
+    width: 35px;
+    display: inline-block; }
+  .text-view-bcg .item-content.item-text-wrap {
+    padding: 10px 0;
+    border-top: 1px solid rgba(221, 221, 221, 0.5);
+    margin: 5px 30px; }
+    .text-view-bcg .item-content.item-text-wrap .text-view-body {
+      color: #7fcac3;
+      font-size: 14px !important;
+      margin-bottom: 0; }
+    .text-view-bcg .item-content.item-text-wrap .info-text {
+      margin-bottom: 10px; }
+    .text-view-bcg .item-content.item-text-wrap .info-text > p:first-child {
+      font-weight: bold;
+      float: left;
+      margin-right: 5px; }
+
+.text-top {
+  padding: 10px; }
+  .text-top .text-view-title {
+    color: #7fcac3;
+    font-size: 36px !important;
+    font-weight: bold;
+    padding-left: 25px; }
+
+.text-rate {
+  padding: 0 25px; }
+  .text-rate .icon-small {
+    color: #00bea4 !important;
+    font-size: 20px !important; }
+  .text-rate .rate-star {
+    display: block;
+    float: left;
+    margin-right: 10px; }
+    .text-rate .rate-star .icon-small {
+      color: #00bea4 !important;
+      font-size: 20px !important;
+      width: 30px;
+      display: block;
+      float: left; }
+  .text-rate .span-small {
+    color: #00bea4;
+    font-size: 12px; }

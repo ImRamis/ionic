@@ -1,0 +1,79 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Theme Parallax Location Details
+===========================================*/
+.container-hearder-image {
+  height: 250px;
+  @include background-size;
+  @include darkening-blend-mode;
+  z-index: 999;
+  position: relative;
+}
+
+.text-view-bcg {
+  @include text-view( 'text-view-bcg');
+  margin: 0;
+  overflow: visible;
+
+  .socila {
+    @include social;
+  }
+
+  .item-content {
+    &.item-text-wrap {
+      padding: 10px 0;
+      border-top: 1px solid rgba(221, 221, 221, 0.50);
+      margin: 5px 30px;
+
+      .text-view-body {
+        @include text-view( 'text-view-body');
+        margin-bottom: 0;
+      }
+
+      .info-text {
+        margin-bottom: 10px;
+      }
+
+      .info-text > p:first-child {
+        font-weight: bold;
+        float: left;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.text-top {
+  padding: 10px;
+
+  .text-view-title {
+    @include text-view( 'text-view-title');
+    font-weight: bold;
+    padding-left: 25px;
+  }
+}
+
+.text-rate {
+  padding: 0 25px;
+
+  .icon-small {
+    @include icon( 'icon-small');
+  }
+
+  .rate-star {
+    display: block;
+    float: left;
+    margin-right: 10px;
+
+    .icon-small {
+      @include icon( 'icon-small');
+      width: 30px;
+      display: block;
+      float: left;
+    }
+  }
+
+  .span-small {
+    @include span( 'span-small');
+  }
+}

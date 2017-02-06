@@ -1,0 +1,38 @@
+<!-- Theme Parallax Players -->
+<ion-content delegate-handle="scroller" elastic-header="elastic-header" class="has-header container-background-full">
+  <!-- Parallax Players  Header-->
+  <div id="elastic-header" class="container-hearder-image">
+    <!-- Parallax Players  Social-->
+    <div class="social right">
+      <i class="icon {{parallaxController.data.iconLike}}"
+      ng-click="parallaxController.onClick('onLike', item, $event)"></i>
+      <i class="icon {{parallaxController.data.iconFavorite}}"
+      ng-click="parallaxController.onClick('onFavorite', item, $event)"></i>
+      <i class="icon {{parallaxController.data.iconShare}}"
+      ng-click="parallaxController.onClick('onShare', item, $event)"></i>
+    </div>
+    <!-- Parallax Players  Title-->
+    <h1 class="parallax-title">{{parallaxController.data.title}}</h1>
+    <!-- Parallax Players  Play Button-->
+    <div class="play-block">
+      <i class="icon-medium icon {{parallaxController.data.iconSkipPrevious}}"
+      ng-click="parallaxController.onClick('onPrevious', item, $event)"></i>
+      <i class="icon-medium icon {{parallaxController.data.iconPlay}}"
+      ng-click="parallaxController.onClick('onPlay', item, $event)"></i>
+      <i class="icon-medium icon {{parallaxController.data.iconSkipNext}}"
+      ng-click="parallaxController.onClick('onNext', item, $event)"></i>
+    </div>
+  </div>
+  <!-- Parallax Players List-->
+  <ion-list>
+    <ion-item class="item-bcg item-avatar-left item-icon-right waves-effect waves-light waves-block"
+    ng-repeat="item in parallaxController.data.items"
+    ng-click="parallaxController.onClick('onItemClick', item, $event)">
+      <img ng-src="{{item.image}}" alt="{{item.imageAlt}}" />
+      <h2 class="item-title">{{item.title}}</h2>
+      <h3 class="item-subtitle">{{item.description}}</h3>
+      <span class="span-small">{{item.duration}}</span>
+      <i class="icon-medium icon {{parallaxController.data.iconPlay}}"></i>
+    </ion-item>
+  </ion-list>
+</ion-content>

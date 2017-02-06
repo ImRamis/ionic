@@ -1,0 +1,86 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Thema Parallax Product
+===========================================*/
+.container-hearder-image {
+  position: relative;
+  @include background-size;
+  @include darkening-blend-mode;
+  width: 100%;
+  height: 250px;
+  display: table;
+  position: relative;
+  z-index: 999;
+
+  .title {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    h1.parallax-title {
+      @include parallax-item( 'parallax-title');
+      position: relative;
+      z-index: 9;
+      margin-top: 0;
+    }
+
+    h2.parallax-subtitle {
+      @include parallax-item( 'parallax-subtitle');
+      margin-bottom: 0;
+      position: relative;
+      z-index: 9;
+    }
+  }
+
+  .social {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9;
+    color: theme-colors('textColors', 'accent', '');
+    font-size: icon-size('icon-small');
+  }
+}
+/*  #Parallax Content
+===========================================*/
+.item-bcg {
+  min-height: 80px;
+  padding-left: 90px;
+  padding-right: 75px;
+  @include item( 'item-bcg');
+
+  &.item-thumbnail-left img {
+    top: 0;
+    left: 0;
+  }
+
+  h2.item-title {
+    @include item( 'item-title');
+  }
+
+  h3.item-subtitle {
+    @include item( 'item-subtitle');
+  }
+
+  .old-price {
+    top: 20px;
+    position: absolute;
+    right: 5px;
+    text-decoration: line-through;
+
+    &.span-small {
+      @include span( 'span-small');
+    }
+  }
+
+  .new-price {
+    font-weight: bold;
+    position: absolute;
+    right: 5px;
+    top: 40px;
+
+    &.span-medium {
+      @include span( 'span-medium');
+    }
+  }
+}
