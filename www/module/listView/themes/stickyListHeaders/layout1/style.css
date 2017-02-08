@@ -1,0 +1,44 @@
+/*  # Theme Small header + medium item
+===========================================*/
+.item-divider {
+  padding: 10px;
+  border-bottom: 1px solid transparent !important; }
+  .item-divider.header-divider {
+    background-color: #fcd736;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    z-index: 9; }
+  .item-divider h2.header-title {
+    color: #424242;
+    font-size: 24px; }
+  .item-divider .icon-medium {
+    color: rgba(66, 66, 66, 0.6);
+    font-size: 32px !important; }
+
+/*  # Content
+===========================================*/
+.item-bcg {
+  background-color: #424242 !important;
+  border-color: #202020 !important; }
+  .item-bcg.item-thumbnail-left {
+    padding-left: 100px;
+    min-height: 93px !important; }
+  .item-bcg .icon-medium {
+    color: rgba(252, 215, 54, 0.6) !important;
+    font-size: 32px !important; }
+  .item-bcg.activated {
+    border-color: transparent; }
+  .item-bcg h2.item-title {
+    color: #fcd736;
+    font-size: 20px; }
+  .item-bcg h3.item-subtitle {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px; }
+  .item-bcg .span-small {
+    color: rgba(252, 215, 54, 0.6);
+    font-size: 14px; }
+  .item-bcg img {
+    border-radius: 4px;
+    height: 56px;
+    width: 56px;
+    top: 5px !important; }

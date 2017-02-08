@@ -1,0 +1,41 @@
+/*  # Theme Styled cards
+================================================*/
+.slider {
+  height: auto; }
+
+/*  #Content
+===========================================*/
+.card-bcg {
+  background-color: #424242 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin: 5px 10px; }
+  .card-bcg .social {
+    position: absolute;
+    right: 10px;
+    bottom: 10px; }
+    .card-bcg .social i.icon {
+      color: rgba(252, 215, 54, 0.6);
+      font-size: 20px;
+      width: 20px; }
+  .card-bcg .card-image {
+    width: 130px;
+    height: 220px;
+    display: block;
+    float: left;
+    margin-right: 20px; }
+  .card-bcg .item-body {
+    padding: 10px; }
+    .card-bcg .item-body h2.card-title {
+      color: #fcd736;
+      font-size: 20px !important;
+      line-height: normal !important;
+      margin-bottom: 0;
+      margin-top: 0; }
+    .card-bcg .item-body h3.card-subtitle {
+      color: rgba(254, 254, 254, 0.6) !important;
+      font-size: 14px;
+      margin: 0; }
+    .card-bcg .item-body p.card-body-text {
+      padding-top: 30px;
+      color: rgba(254, 254, 254, 0.6) !important;
+      font-size: 14px; }

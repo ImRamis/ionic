@@ -1,0 +1,26 @@
+/*  #Theme Appearance animation (Alpha)
+================================================*/
+.item.item-bcg {
+  background-color: #424242 !important;
+  border-color: #202020 !important; }
+
+.item h2.item-title {
+  color: #fcd736;
+  font-size: 20px;
+  line-height: 35px; }
+
+.item .icon-small {
+  color: rgba(252, 215, 54, 0.6) !important;
+  font-size: 20px !important; }
+
+/*  #Theme Appearance animation (Alpha) fadeIn
+================================================*/
+.chat-item.ng-enter {
+  -webkit-animation: fadeIn 500ms;
+  -moz-animation: fadeIn 500ms;
+  -o-animation: fadeIn 500ms;
+  animation: fadeIn 500ms; }
+
+.chat-item.ng-enter-stagger {
+  -webkit-animation-delay: 50ms;
+  animation-delay: 50ms; }

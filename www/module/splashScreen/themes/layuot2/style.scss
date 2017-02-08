@@ -1,0 +1,42 @@
+//*  #Main Sass
+@import "../../../../../scss/main-style.scss";
+/*  #Thema Down + Ken Burns
+===========================================*/
+#splash-background-image .splash-screen {
+  animation: splashScreen 40s ease infinite;
+  -ms-animation: splashScreen 40s ease infinite;
+  -webkit-animation: splashScreen 40s ease infinite;
+  -o-animation: splashScreen 40s ease infinite;
+  -moz-animation: splashScreen 40s ease infinite;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+@keyframes splashScreen {
+  0%,
+  100% {
+    transform: scale(1.5, 1.5) translate(20px, 20px);
+  }
+
+  25% {
+    transform: scale(1.8, 1.8) translate(50px, 50px);
+  }
+
+  50% {
+    transform: scale(1.6, 1.6) translate(60px, 90px);
+  }
+
+  75% {
+    transform: scale(2.0, 2.0) translate(10px, 10px);
+  }
+}
+
+.logo-down {
+  max-width: 100px;
+  position: relative;
+  margin-top: 50% !important;
+  left: 50%;
+  -webkit-animation: slideInDown 5s;
+  animation: slideInDown 5s;
+}

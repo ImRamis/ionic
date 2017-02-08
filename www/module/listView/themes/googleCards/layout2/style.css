@@ -1,0 +1,68 @@
+/*  #Theme Products cards
+===========================================*/
+.slider {
+  height: auto; }
+
+.card-bcg {
+  background-color: #424242 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 0 5px 5px;
+  margin: 5px 10px; }
+  .card-bcg h2.card-title {
+    color: #fcd736;
+    font-size: 20px !important;
+    margin: 0; }
+  .card-bcg .container-background {
+    background-color: white;
+    background-blend-mode: luminosity;
+    position: relative;
+    height: 120px;
+    display: table;
+    width: 100%; }
+    .card-bcg .container-background::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      background-color: #424242; }
+    .card-bcg .container-background .half {
+      display: table-cell;
+      vertical-align: bottom;
+      padding: 10px;
+      position: relative; }
+      .card-bcg .container-background .half .price {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: #fcd736; }
+      .card-bcg .container-background .half p.card-body-text {
+        color: rgba(254, 254, 254, 0.6) !important;
+        font-size: 14px;
+        margin: 0; }
+    .card-bcg .container-background .button-default {
+      background-color: #fcd736 !important;
+      color: #202020 !important;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 4px; }
+  .card-bcg .card-header h2.card-title {
+    color: #fcd736;
+    font-size: 20px !important;
+    margin-bottom: 0; }
+  .card-bcg .card-header h3.card-subtitle {
+    color: rgba(254, 254, 254, 0.6) !important;
+    font-size: 14px;
+    margin: 5px 10px; }
+  .card-bcg .card-header > .card-title:first-child {
+    margin: 5px 10px; }
+  .card-bcg .card-header h2.card-title {
+    color: #fcd736;
+    font-size: 20px !important;
+    clear: both;
+    margin-bottom: 10px; }

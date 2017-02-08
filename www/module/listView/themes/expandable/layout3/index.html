@@ -1,0 +1,39 @@
+<!-- Themes Expandable Small items + profile header -->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!-- Expandable Small items + profile header-->
+  <div class="container-hearder-image">
+    <ion-item class="item-avatar transparent">
+      <img ng-src="{{listViewController.data.avatar}}" alt="{{listViewController.data.avatarAlt}}" />
+      <h1 class="header-title">{{listViewController.data.title}}</h1>
+      <h2 class="header-subtitle">{{listViewController.data.description}}</h2>
+    </ion-item>
+  </div>
+  <ion-list>
+    <!-- Expandable Small items + profile header Content-->
+    <ul class="collapsible" data-collapsible="expandable">
+      <li ng-repeat="group in listViewController.data.items">
+        <div class="collapsible-header">
+          <ion-item class="item-icon-left block-header item-icon-right item-bcg">
+            <i class="icon-small icon {{group.icon}}"></i>
+            <h2 class="item-title">{{group.title}}</h2>
+            <h3 class="item-subtitle">{{group.description}}</h3>
+            <i class="icon-small icon icon-chevron-down"></i>
+          </ion-item>
+        </div>
+        <!-- Expandable Small items + profile header Accordion-->
+        <div class="collapsible-body">
+            <ion-item class="item-avatar subitem-bcg item-icon-right waves-effect waves-block waves-light"
+            ng-repeat="item in group.items"
+            ng-click="listViewController.onClick('onItemClick', item, $event)">
+              <img ng-src="{{item.image}}" alt="{{item.title}}" />
+              <h2 class="subitem-title">{{item.title}}</h2>
+              <i class="icon-small icon {{item.rightIcon}}"></i>
+            </ion-item>
+        </div>
+      </li>
+    </ul>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,39 @@
+<!--Theme Post cards 2-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!--Theme Post cards 2  Content-->
+  <ion-list ng-click="listViewController.onClick('onItemClick', item, $event)"
+  ng-repeat="(key, item) in listViewController.data.items">
+    <ion-slide-box on-slide-changed="listViewController.deleteItem(key, true)" show-pager="false">
+      <!--Theme Post cards 2 Card-->
+      <ion-slide>
+        <!--- Post cards 2 Content -->
+        <div class="card transparent">
+          <!--- Post cards 2 Card Avatar -->
+          <ion-item class="card-bcg item-avatar">
+            <img ng-src="{{item.avatar}}" alt="{{item.avatarAlt}}">
+            <h2 class="card-title">{{item.name}}</h2>
+            <h3 class="card-subtitle">{{item.duration}}</h3>
+          </ion-item>
+          <!--- Post cards 2 Card Images -->
+          <ion-item class="item-image">
+            <img ng-src="{{item.image}}">
+          </ion-item>
+          <!--- Post cards 2 Card Buttons -->
+          <ion-item class="card-bcg">
+            <button class="btn button-default disabled waves-effect waves-grey"
+            ng-click="listViewController.onClick('onLike', item, $event)">{{item.like}}</button>
+            <button class="btn button-default disabled waves-effect waves-grey"
+            ng-click="listViewController.onClick('onShare', item, $event)">{{item.share}}</button>
+            <button class="btn button-default disabled waves-effect waves-grey"
+            ng-click="listViewController.onClick('onBuy', item, $event)">{{item.buy}}</button>
+          </ion-item>
+        </div>
+      </ion-slide>
+      <ion-slide>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,27 @@
+<!-- Themes Simple small items -->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!-- Simple small items Content-->
+  <ul class="collapsible" data-collapsible="expandable">
+    <li ng-repeat="group in listViewController.data.items">
+      <div class="collapsible-header transparent">
+        <ion-item class="item-icon-left item-icon-right item-bcg">
+          <i ng-if="group.icon" class="icon-small icon {{group.icon}}"></i>
+          <h2 class="item-title">{{group.title}}</h2>
+          <i class="icon-small icon up icon-chevron-down"></i>
+        </ion-item>
+      </div>
+      <!-- Simple small items Accordion-->
+      <div class="collapsible-body">
+          <ion-item class="subitem-title subitem-bcg item-icon-left waves-effect waves-block waves-light"
+          ng-repeat="item in group.items"
+          ng-click="listViewController.onClick('onItemClick', item, $event)">
+            <i ng-if="item.icon" class="icon-small icon {{item.icon}}"></i>
+            <h3 class="subitem-title">{{item.title}}</h3>
+          </ion-item>
+      </div>
+    </li>
+  </ul>
+</ion-content>

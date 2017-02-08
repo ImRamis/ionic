@@ -1,0 +1,40 @@
+<!--Theme Styled cards-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!--Styled cards List Content-->
+  <ion-list>
+    <ion-slide-box on-slide-changed="listViewController.deleteItem(key, true)"
+    show-pager="false" ng-click="listViewController.onClick('onItemClick', item, $event)"
+    ng-repeat="(key, item) in listViewController.data.items">
+      <ion-slide>
+        <!--Styled cards Card-->
+        <div class="card card-bcg">
+          <div class="item-body">
+            <div class="card-image">
+              <img ng-src="{{item.image}}" alt="{{item.title}}" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">{{item.title}}</h2>
+              <h3 class="card-subtitle">{{item.description}}</h3>
+              <h3 class="card-subtitle">{{item.shortDescription}}</h3>
+              <p class="card-body-text">{{item.longDescription}}</p>
+            </div>
+            <!--Social Share-->
+            <div class="social">
+              <i ng-if="item.iconLike" class="icon {{item.iconLike}}"
+              ng-click="listViewController.onClick('onLike', item, $event)"></i>
+              <i ng-if="item.iconFavorite" class="icon {{item.iconFavorite}}"
+              ng-click="listViewController.onClick('onFavorite', item, $event)"></i>
+              <i ng-if="item.iconShare" class="icon {{item.iconShare}}"
+              ng-click="listViewController.onClick('onShare', item, $event)"></i>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-list>
+</ion-content>

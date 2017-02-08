@@ -1,0 +1,63 @@
+/*  # Thema Full width image
+================================================*/
+.list {
+  padding-top: 0; }
+  .list h2.item-title {
+    color: #fcd736;
+    font-size: 20px;
+    margin: 0; }
+  .list h3.item-subtitle {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px;
+    margin: 0; }
+
+.slider {
+  height: 150px;
+  border-bottom: 1px solid #fcd736;
+  text-align: center; }
+  .slider .item-images {
+    background-color: white;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: table;
+    width: 100%;
+    height: 150px; }
+    .slider .item-images::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      background-color: #424242; }
+    .slider .item-images .item-text-wrap {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      z-index: 9;
+      position: relative; }
+
+.swiped-item-bcg {
+  background-color: rgba(66, 66, 66, 0.6) !important;
+  display: table;
+  height: 150px; }
+  .swiped-item-bcg i.icon {
+    font-size: 32px !important;
+    color: #fcd736; }
+  .swiped-item-bcg .swiped-item-title {
+    color: white;
+    font-size: 12px !important; }
+  .swiped-item-bcg a {
+    display: table-cell;
+    vertical-align: bottom;
+    color: #fcd736;
+    width: 90px;
+    padding: 15px; }
+  .swiped-item-bcg .swiped-item-title {
+    display: table-cell;
+    vertical-align: middle; }

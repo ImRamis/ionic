@@ -1,0 +1,51 @@
+/*  Theme List big image
+===========================================*/
+.collapsible {
+  margin: 0;
+  border: none; }
+  .collapsible .collapsible-header {
+    padding: 0;
+    border: none; }
+    .collapsible .collapsible-header .social {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+      .collapsible .collapsible-header .social i.icon {
+        color: rgba(252, 215, 54, 0.6);
+        font-size: 20px;
+        width: 20px; }
+    .collapsible .collapsible-header .item-bcg {
+      background-color: #424242 !important;
+      border-color: #202020 !important;
+      padding-left: 190px;
+      min-height: 170px;
+      padding-top: 20px; }
+      .collapsible .collapsible-header .item-bcg img {
+        top: 0 !important;
+        left: 0 !important;
+        max-height: 100% !important;
+        max-width: 170px !important; }
+      .collapsible .collapsible-header .item-bcg h2.item-title {
+        color: #fcd736;
+        font-size: 20px; }
+      .collapsible .collapsible-header .item-bcg h3.item-subtitle {
+        color: rgba(254, 254, 254, 0.6);
+        font-size: 12px; }
+  .collapsible .collapsible-body {
+    border: none; }
+    .collapsible .collapsible-body .subitem-bcg {
+      background-color: #202020 !important;
+      border: none; }
+      .collapsible .collapsible-body .subitem-bcg img {
+        border-radius: 4px; }
+      .collapsible .collapsible-body .subitem-bcg .subitem-title {
+        padding-top: 20px;
+        color: white;
+        font-size: 14px;
+        line-height: normal; }
+      .collapsible .collapsible-body .subitem-bcg h3.subitem-subtitle {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px; }
+      .collapsible .collapsible-body .subitem-bcg .icon-medium {
+        color: rgba(252, 215, 54, 0.6) !important;
+        font-size: 32px !important; }

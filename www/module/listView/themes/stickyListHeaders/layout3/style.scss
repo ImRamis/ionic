@@ -1,0 +1,51 @@
+//*  # Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  #Theme Small header + medium item
+===========================================*/
+.item-divider {
+  padding: 10px;
+
+  &.header-divider {
+    @include header( 'header-divider');
+    z-index: 9;
+  }
+
+  h2.header-title {
+    @include header( 'header-title');
+  }
+
+  .icon-small {
+    color: theme-colors('mainColors', 'primary', 'opacity60');
+    font-size: icon-size('icon-small') !important;
+    padding-top: 7px;
+  }
+
+  .span-small {
+    color: theme-colors('mainColors', 'primary', 'opacity60');
+    font-size: font-size-text('p') !important;
+    padding-top: 7px;
+  }
+}
+
+.item-bcg {
+  @include item( 'item-bcg');
+
+  .social {
+    @include social;
+  }
+
+  .item-title {
+    @include item( 'item-title');
+    padding: 5px 0;
+  }
+
+  .item-body {
+    width: 100%;
+    padding: 0;
+
+    .item-body-text {
+      @include item( 'item-body-text');
+      padding: 25px 5px 0;
+    }
+  }
+}

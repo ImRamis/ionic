@@ -1,0 +1,38 @@
+/*  #Main Sass
+================================================*/
+@import "../../../../../../scss/main-style.scss";
+/*  #Theme Post cards
+===========================================*/
+.slider {
+  height: auto;
+}
+
+.card-bcg {
+  @include item-card( 'card-bcg');
+  margin: 5px 10px;
+
+  .item {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  h2.card-title {
+    @include item-card( 'card-title');
+  }
+
+  .card-subtitle {
+    @include item-card( 'card-subtitle');
+  }
+
+  .card-body-text {
+    @include item-card( 'card-body-text');
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+  }
+
+  .button-flat {
+    @include button( 'button-flat');
+    padding: 0 15px;
+  }
+}

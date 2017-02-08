@@ -1,0 +1,38 @@
+<!-- Theme List big image -->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <ul class="collapsible" data-collapsible="expandable">
+    <li ng-repeat="group in listViewController.data.items">
+      <!-- List Big Image Header -->
+      <div class="collapsible-header transparent">
+        <ion-item class="item-thumbnail-left item-bcg waves-effect waves-block waves-light">
+          <img ng-src="{{group.image}}" alt="{{group.title}}" />
+          <h2 class="item-title">{{group.title}}</h2>
+          <h3 class="item-subtitle">{{group.description}}</h3>
+          <span class="social">
+              <i ng-if="group.iconLike" class="icon {{group.iconLike}}"
+                 ng-click="listViewController.onClick('onLike', group, $event)"></i>
+              <i ng-if="group.iconFavorite" class="icon {{group.iconFavorite}}"
+                 ng-click="listViewController.onClick('onFavorite', group, $event)"></i>
+              <i ng-if="group.iconShare" class="icon {{group.iconShare}}"
+                 ng-click="listViewController.onClick('onShare', group, $event)"></i>
+          </span>
+        </ion-item>
+      </div>
+      <!-- List Big Image Body -->
+      <div class="collapsible-body">
+        <ion-item class="item-thumbnail-left item-icon-right waves-effect waves-block waves-light transparent subitem-bcg"
+        ng-repeat="item in group.items" ng-click="listViewController.onClick('onItemClick', item, $event)">
+          <img ng-src="{{item.image}}" alt="{{item.title}}" />
+          <h2 class="subitem-title">{{item.title}}</h2>
+          <h3 class="subitem-subtitle">{{item.description}}</h3>
+          <i class="icon-medium icon {{item.iconPlay}}"
+          ng-click="listViewController.onClick('onPlay', item, $event)"></i>
+        </ion-item>
+
+      </div>
+    </li>
+  </ul>
+</ion-content>

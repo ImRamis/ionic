@@ -1,0 +1,32 @@
+/*  # Theme Simple small item
+===========================================*/
+.slider {
+  height: 70px;
+  border-bottom: 1px solid #202020; }
+  .slider .item-bcg {
+    background-color: #424242 !important;
+    border-color: #202020 !important; }
+  .slider h2.item-title {
+    color: #fcd736;
+    font-size: 20px;
+    padding-top: 10px; }
+  .slider .icon-small {
+    color: rgba(252, 215, 54, 0.6) !important;
+    font-size: 20px !important; }
+
+.swiped-item-bcg {
+  background-color: rgba(66, 66, 66, 0.6) !important;
+  display: table;
+  width: 100%; }
+  .swiped-item-bcg i.icon {
+    font-size: 32px !important;
+    color: #fcd736; }
+  .swiped-item-bcg .swiped-item-title {
+    color: white;
+    font-size: 12px !important; }
+  .swiped-item-bcg h2.swiped-item-title {
+    margin-bottom: 0; }
+  .swiped-item-bcg a {
+    height: 70px;
+    width: 50%;
+    display: table-cell; }

@@ -1,0 +1,74 @@
+/*  #Theme Appearance animation (Random)
+===========================================*/
+.item.item-bcg {
+  background-color: #424242 !important;
+  border-color: #202020 !important; }
+
+.item .icon-small {
+  color: rgba(252, 215, 54, 0.6) !important;
+  font-size: 20px !important; }
+
+.item h2.item-title {
+  color: #fcd736;
+  font-size: 20px;
+  line-height: 35px; }
+
+/*  #Theme Appearance animation  (Random) fadeInLeft
+=========================================================*/
+.fade-in-left-item.ng-enter {
+  -webkit-animation: fadeInLeft  500ms;
+  -moz-animation: fadeInLeft 500ms;
+  -o-animation: fadeInLeft 500ms;
+  animation: fadeInLeft 500ms; }
+
+.fade-in-left-item.ng-enter-stagger {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+/*  #Theme Appearance animation  (Random) fadeInRight
+=========================================================*/
+.fade-in-right-item.ng-enter {
+  -webkit-animation: fadeInRight  500ms;
+  -moz-animation: fadeInRight 500ms;
+  -o-animation: fadeInRight 500ms;
+  animation: fadeInRight 500ms; }
+
+.fade-in-right-item.ng-enter-stagger {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+/*  #Theme Appearance animation  (Random) fadeInDownBig
+==========================================================*/
+.fade-in-down-item.ng-enter {
+  -webkit-animation: fadeInDownBig 500ms;
+  -moz-animation: fadeInDownBig 500ms;
+  -o-animation: fadeInDownBig 500ms;
+  animation: fadeInDownBig 500ms; }
+
+.fade-in-down-item.ng-enter-stagger {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+/*  #Theme Appearance animation  (Random) fadeIn
+==========================================================*/
+.fade-in-item.ng-enter {
+  -webkit-animation: fadeIn 500ms;
+  -moz-animation: fadeIn 500ms;
+  -o-animation: fadeIn 500ms;
+  animation: fadeIn 500ms; }
+
+.fade-in-item.ng-enter-stagger {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+/*  #Theme Appearance animation  (Random) zoomIn
+==========================================================*/
+.zoom-in.ng-enter {
+  -webkit-animation: zoomIn 500ms;
+  -moz-animation: zoomIn 500ms;
+  -o-animation: zoomIn 500ms;
+  animation: zoomIn 500ms; }
+
+.zoom-in.ng-enter-stagger {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }

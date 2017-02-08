@@ -1,0 +1,48 @@
+<!--Theme Small item + header-->
+<div class="bar bar-subheader header-bcg">
+  <!--Small item + header-->
+  <ion-item class="transparent">
+    <i class="icon-large icon {{listViewController.data.iconPlay}}"></i>
+    <h1 class="header-title">{{listViewController.data.title}}</h1>
+    <h2 class="header-subtitle">{{listViewController.data.description}}</h2>
+    <span class="span-medium">{{listViewController.data.shortDescription}}</span>
+    <div class="social right">
+      <i class="icon {{listViewController.data.iconLike}}"
+      ng-click="listViewController.onClick('onLike', '', $event)"></i>
+      <i class="icon {{listViewController.data.iconFavorite}}"
+      ng-click="listViewController.onClick('onFavorite', '', $event)"></i>
+      <i class="icon {{listViewController.data.iconShare}}"
+      ng-click="listViewController.onClick('onShare', '', $event)"></i>
+    </div>
+  </ion-item>
+</div>
+<!--Swipe To Dismiss -->
+<ion-content class="swipe-to-dismiss">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()"></ion-refresher>
+  <ion-slide-box ng-repeat="item in listViewController.data.items"
+  on-slide-changed="listViewController.slideHasChanged($index, item)" show-pager="false">
+    <ion-slide>
+      <ion-item class="item-bcg item-avatar-left item-icon-right waves-effect waves-light waves-block"
+      ng-click="listViewController.onClick('onItemClick', item, $event)">
+        <img ng-src="{{item.image}}" />
+        <h2 class="item-title">{{item.title}}</h2>
+        <h3 class="item-subtitle">{{item.description}}</h3>
+        <span class="span-small">{{item.shortDescription}}</span>
+        <i class="icon-medium icon {{item.iconPlay}}"></i>
+      </ion-item>
+    </ion-slide>
+    <ion-slide>
+      <!--Small item + header Controls Item-->
+      <div class="swiped-item-bcg">
+        <a ng-click="listViewController.deleteItem($index)">
+          <h2 class="swiped-item-title">{{item.message}}</h2>
+        </a>
+        <a ng-click="listViewController.undo(true)">
+          <i class="icon {{item.iconUndo}}"></i>
+        </a>
+      </div>
+    </ion-slide>
+    <ion-slide></ion-slide>
+  </ion-slide-box>
+</ion-content>

@@ -1,0 +1,34 @@
+
+<div class="nav-bar-block" nav-bar="active"><ion-header-bar class="bar-stable bar bar-header disable-user-behavior" align-title="center"><button class="button back-button buttons button-clear header-item" ng-click="$ionicGoBack()">
+                <i class="icon-arrow-left"></i>
+            <span class="back-text" style="transform: translate3d(0px, 0px, 0px);"><span class="default-title">Back</span><span class="previous-title hide">Centered with header</span></span></button><div class="buttons buttons-left header-item"><span class="left-buttons">
+                <button class="button button-icon button-clear ion-navicon hide " menu-toggle="left">
+                </button>
+            </span></div><div class="title title-center header-item" style="transform: translate3d(0px, 0px, 0px); left: 102px; right: 97px; ">Professions</div></div></ion-header-bar></div>
+                
+
+
+
+<ion-content class="">
+    <ion-refresher pulling-text="Refreshing Regions" on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-list>
+        <div class="container-hearder-image text-center"   style="background-image: url('img/background-small/7.jpg')" >
+            <div class="header-title">Karachi</div>
+            
+        </div>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li ng-repeat="group in region" ng-click="onClick(group)">
+                <ion-item class="collapsible-header item-bcg">
+                    <i class="icon-small icon icon-map-marker-radius"></i>
+                    <h2 class="item-title">{{group.REGION}}</h2>
+                </ion-item>
+                <!-- Centered with header Accordion-->
+                <div class="collapsible-body" id="{{group.REGION}}">
+                    <ion-item ng-click="onSubClick(item)" class="subitem-bcg text-center waves-block waves-effect waves-light transparent" ng-repeat="item in subregion | filter:{REGIONID: group.ID} ">
+                        <h2 class="subitem-title ">{{item.AREA}}</h2>
+                    </ion-item>
+                </div>
+            </li>
+        </ul>
+</ion-content>

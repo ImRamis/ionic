@@ -1,0 +1,47 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Theme Medium item with avatar
+===========================================*/
+.item-bcg {
+  @include item( 'item-bcg');
+
+  .item-content {
+    padding-left: 100px;
+    min-height: 84px;
+    padding-top: 20px;
+    background-color: transparent;
+
+    .item-title {
+      @include item( 'item-title');
+    }
+
+    .item-subtitle {
+      @include item( 'item-subtitle');
+    }
+  }
+
+  img {
+    max-width: 64px !important;
+    max-height: 64px !important;
+    top: 10px !important;
+  }
+}
+/*  #Reorder Button Style
+==========================================*/
+.item-right-edit {
+  background-color: transparent;
+
+  &.visible.active {
+    background-color: transparent !important;
+  }
+
+  &.item-reorder {
+    padding: 0;
+
+    .button.icon {
+      font-size: icon-size('icon-medium') !important;
+      color: theme-colors('mainColors', 'secondary') !important;
+      right: 0;
+    }
+  }
+}

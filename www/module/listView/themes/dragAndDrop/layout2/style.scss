@@ -1,0 +1,110 @@
+// # Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Theme Products + CTA header
+==========================================*/
+.container-hearder-image {
+  height: 140px!important;
+  @include darkening-blend-mode;
+  display: table;
+  width: 100%;
+  border: none;
+
+  .half {
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 5px;
+    z-index: 9999;
+    position: relative;
+
+    .span-large {
+      @include span( 'span-large');
+      margin-bottom: 20px;
+    }
+  }
+
+  h1.header-title {
+    color: theme-colors('mainColors', 'secondary');
+    font-size: font-size-text('h1');
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  h2.header-subtitle {
+    color: theme-colors('mainColors', 'secondary');
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .button-default {
+    @include button( 'button-default');
+    clear: both;
+  }
+}
+/*  #CONTENT
+==========================================*/
+.drag-and-drop {
+  top: 196px !important;
+
+  .item-bcg {
+    @include item( 'item-bcg');
+  }
+
+  h2.item-title {
+    @include item( 'item-title');
+  }
+
+  h3.item-subtitle {
+    @include item( 'item-subtitle');
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .span-medium {
+    @include span( 'span-medium');
+    margin-top: 5px;
+  }
+
+  .span-small {
+    color: theme-colors('textColors', 'secondary', 'opacity60');
+    font-size: font-size-text('h5');
+    text-decoration: line-through;
+  }
+
+  img {
+    max-width: 100px !important;
+    max-height: 102px !important;
+    width: 100px !important;
+    height: 102px !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .item-content {
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+}
+/*  #Reorder Button Style
+==========================================*/
+.item-right-edit {
+  background-color: transparent;
+  width: 40px;
+  padding-left: 0;
+
+  &.item-reorder .button.icon {
+    right: 0;
+    padding: 0;
+    border-radius: 0!important;
+    @include button( 'button-default');
+  }
+
+  .button {
+    min-width: 40px;
+  }
+}
+/*  #Ios Style
+==========================================*/
+.platform-ios .content-list {
+  top: 204px!important;
+}

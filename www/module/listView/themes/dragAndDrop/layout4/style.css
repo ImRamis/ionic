@@ -1,0 +1,60 @@
+/*  # Themes Medium item with image
+===========================================*/
+.item-bcg {
+  background-color: #424242 !important;
+  border-color: #202020 !important; }
+  .item-bcg h2.item-title {
+    color: #fcd736;
+    font-size: 20px; }
+  .item-bcg h3.item-subtitle {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px; }
+  .item-bcg .item-content {
+    background-color: transparent;
+    padding-right: 175px;
+    height: 100px; }
+  .item-bcg .item-img {
+    background-color: white;
+    background-blend-mode: luminosity;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 160px !important;
+    height: 100px !important; }
+    .item-bcg .item-img::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      background-color: #424242; }
+  .item-bcg span {
+    position: absolute;
+    float: right;
+    top: 70px;
+    right: 195px; }
+    .item-bcg span .span-medium {
+      color: #fcd736;
+      font-size: 24px;
+      line-height: 24px; }
+    .item-bcg span .icon-small {
+      color: rgba(252, 215, 54, 0.6) !important;
+      font-size: 20px !important;
+      display: block;
+      float: left; }
+
+/*  #Reorder Button Style
+==========================================*/
+.item-right-edit {
+  background-color: transparent; }
+  .item-right-edit.visible.active {
+    background-color: transparent !important; }
+  .item-right-edit.item-reorder {
+    padding: 0; }
+    .item-right-edit.item-reorder .button.icon {
+      color: #fcd736 !important;
+      right: 0; }

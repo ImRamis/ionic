@@ -1,0 +1,23 @@
+<!--Theme Theme Medium header + medium item-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <ion-list ng-repeat="group in listViewController.data.items">
+    <!--Theme Medium header + medium item Header-->
+    <ion-item class="item-icon-right item-divider header-divider text-right"
+    ion-affix data-affix-within-parent-with-class="list">
+      <h2 class="header-title">{{group.title}}</h2>
+      <i class="icon-medium icon {{group.icon}}"></i>
+    </ion-item>
+    <!--Theme Medium header + medium item Content-->
+    <ion-item class="item-bcg waves-effect waves-light waves-block" ng-repeat="item in group.items"
+    ng-click="listViewController.onClick('onItemClick', item, $event)">
+      <i class="icon-small icon {{item.iconHome}} left"></i>
+      <h2 class="item-title">{{item.title}}</h2>
+      <i class="icon-small icon {{item.iconWalk}} left"></i>
+      <p class="item-subtitle left">{{item.description}}</p>
+      <span class="span-medium price right">{{item.price}}</span>
+    </ion-item>
+  </ion-list>
+</ion-content>

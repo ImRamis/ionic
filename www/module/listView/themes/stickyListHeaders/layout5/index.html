@@ -1,0 +1,20 @@
+<!--Theme Sticky List Headers Universal-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!--Theme Simple header with simple list Divider-->
+  <ion-list ng-repeat="group in listViewController.data.items">
+    <ion-item class="item-divider header-divider"
+    ion-affix data-affix-within-parent-with-class="list">
+      <h2 class="header-title">{{group.title}}</h2>
+    </ion-item>
+    <!--Theme Simple header with simple list Content-->
+    <ion-item class="item-avatar-left item-bcg item-icon-right waves-effect waves-light waves-block"
+    ng-repeat="item in group.items" ng-click="listViewController.onClick('onFavorite', item, $event)">
+      <img ng-src="{{item.image}}" alt="{{item.image}}" />
+      <i class="icon-small icon" ng-class="{'icon-heart': item.favorite, 'icon-heart-outline': !item.favorite}"></i>
+      <h2 class="item-title">{{item.title}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

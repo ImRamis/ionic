@@ -1,0 +1,95 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  Theme Centered with header
+===========================================*/
+.container-hearder-image {
+  height: 145px;
+  display: table;
+  width: 100%;
+  @include darkening-blend-mode;
+  position: relative;
+
+  .header-title {
+    color: theme-colors('textColors', 'primary');
+    font-size: font-size-text('h1');
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 9999;
+    position: relative;
+  }
+}
+/*  Theme Centered with header Content
+===========================================*/
+.collapsible {
+  margin: 0;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+
+  .icon-small {
+    @include icon( 'icon-small');
+    margin: 0 auto;
+    float: none;
+    line-height: 30px;
+  }
+
+  .item {
+    position: relative;
+    border: none;
+
+    &.item-bcg {
+      background-color: theme-colors('mainColors', 'primary');
+      margin: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        left: 25%;
+        height: 1px;
+        background-color: theme-colors('mainColors', 'accent');
+      }
+
+      &.active {
+        &::before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .collapsible-header {
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    h2.item-title {
+      @include item( 'item-title');
+      line-height: normal;
+      margin: 10px 0;
+    }
+  }
+
+  .collapsible-body {
+    border: none;
+
+    .subitem-bcg {
+      @include subitem( 'subitem-bcg');
+    }
+
+    h2.subitem-title {
+      @include subitem( 'subitem-title');
+      padding: 15px 0;
+      margin: 0;
+    }
+
+    .item {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    & > .item:last-child {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}

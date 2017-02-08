@@ -1,0 +1,33 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Theme Simple small item
+================================================*/
+.item-bcg {
+  @include item( 'item-bcg');
+
+  .item-content {
+    background-color: transparent !important;
+  }
+
+  .item-title {
+    padding-top: 10px;
+    @include item( 'item-title');
+  }
+
+  .item-right-edit {
+    background-color: transparent;
+
+    &.visible.active {
+      background-color: transparent !important;
+    }
+
+    &.item-reorder {
+      padding: 0;
+
+      .button.icon {
+        color: theme-colors('mainColors', 'secondary') !important;
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  Theme Full image with CTA
+===========================================*/
+.collapsible {
+  border: 0;
+  box-shadow: none;
+  margin: 10px;
+
+  .collapsible-header {
+    position: relative;
+    border-bottom: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: $border-radius;
+
+    .container-background {
+      @include darkening-blend-mode;
+      height: 10em;
+      border-radius: $border-radius;
+      display: table;
+      width: 100%;
+
+      .half {
+        display: table-cell;
+        vertical-align: bottom;
+        padding: 0 10px;
+        z-index: 9999;
+        position: relative;
+      }
+    }
+
+    h2.item-title {
+      @include item('item-title');
+      padding: 10px;
+    }
+
+    .button-default {
+      @include button( 'button-default');
+      margin-bottom: 10px;
+    }
+  }
+
+  .collapsible-body {
+    border-bottom: 1px solid transparent;
+    margin-top: 5px !important;
+
+    .button-default {
+      background-color: transparent;
+      color: theme-colors('mainColors', 'accent');
+      padding: 10px;
+      margin-bottom: 5px;
+      border-color: transparent;
+    }
+
+    .icon-small {
+      font-size: icon-size('icon-small');
+      color: theme-colors('mainColors', 'accent');
+    }
+  }
+}

@@ -1,0 +1,49 @@
+//  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  #Theme Simple small items
+===========================================*/
+.icon-small {
+  @include icon( 'icon-small');
+}
+
+.collapsible {
+  margin: 0;
+  border: none;
+  box-shadow: none;
+
+  .collapsible-header {
+    padding: 0;
+    border: 0;
+  }
+
+  .active {
+    .up {
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      right: 10;
+    }
+  }
+
+  .collapsible-body {
+    border: none;
+  }
+
+  .item-bcg {
+    @include item( 'item-bcg');
+
+    h2.item-title {
+      @include item( 'item-title');
+    }
+  }
+
+  .subitem-bcg {
+    @include subitem( 'subitem-bcg');
+    margin: 0;
+    border: 0;
+
+    h3.subitem-title {
+      @include subitem( 'subitem-title');
+    }
+  }
+}

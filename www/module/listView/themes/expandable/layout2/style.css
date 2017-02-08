@@ -1,0 +1,59 @@
+/*  Theme Full image with CTA
+===========================================*/
+.collapsible {
+  border: 0;
+  box-shadow: none;
+  margin: 10px; }
+  .collapsible .collapsible-header {
+    position: relative;
+    border-bottom: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 4px; }
+    .collapsible .collapsible-header .container-background {
+      background-color: white;
+      background-blend-mode: luminosity;
+      height: 10em;
+      border-radius: 4px;
+      display: table;
+      width: 100%; }
+      .collapsible .collapsible-header .container-background::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        pointer-events: none;
+        mix-blend-mode: multiply;
+        background-color: #424242; }
+      .collapsible .collapsible-header .container-background .half {
+        display: table-cell;
+        vertical-align: bottom;
+        padding: 0 10px;
+        z-index: 9999;
+        position: relative; }
+    .collapsible .collapsible-header h2.item-title {
+      color: #fcd736;
+      font-size: 20px;
+      padding: 10px; }
+    .collapsible .collapsible-header .button-default {
+      background-color: #fcd736 !important;
+      color: #202020 !important;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 4px;
+      margin-bottom: 10px; }
+  .collapsible .collapsible-body {
+    border-bottom: 1px solid transparent;
+    margin-top: 5px !important; }
+    .collapsible .collapsible-body .button-default {
+      background-color: transparent;
+      color: #202020;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-color: transparent; }
+    .collapsible .collapsible-body .icon-small {
+      font-size: 20px;
+      color: #202020; }

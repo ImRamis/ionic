@@ -1,0 +1,131 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  #Theme Products + CTA footer
+===========================================*/
+.slider {
+  height: auto;
+  border-bottom: $item-divider-small;
+}
+
+.swipe-list {
+  .list {
+    padding-bottom: 120px;
+  }
+
+  .item-bcg {
+    @include item( 'item-bcg');
+    padding-right: 80px;
+    min-height: 82px;
+
+    img {
+      top: 0 !important;
+      left: 0 !important;
+    }
+
+    h2.item-title {
+      @include item( 'item-title');
+    }
+
+    h3.item-subtitle {
+      @include item( 'item-subtitle');
+      margin: 0;
+    }
+  }
+
+  .new-price {
+    position: absolute;
+    right: 5px;
+    top: 40px;
+
+    &.span-medium {
+      @include span( 'span-medium');
+    }
+  }
+
+  .old-price {
+    font-weight: 400;
+    top: 20px;
+    position: absolute;
+    right: 5px;
+    text-decoration: line-through;
+
+    &.span-small {
+      color: theme-colors('textColors', 'secondary', 'opacity60');
+      font-size: font-size-text('h5');
+    }
+  }
+
+  .swiped-item-bcg {
+    @include swiped-item( 'swiped-item-bcg');
+    width: 100%;
+    display: table;
+    height: 80px;
+
+    h2.swiped-item-title {
+      @include swiped-item( 'swiped-item-title');
+      margin: 0;
+    }
+
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    a:first-child {
+      width: 70%;
+    }
+  }
+}
+
+/*  #Fixed block
+===========================================*/
+.footer-bcg {
+  @include footer-item( 'footer-bcg');
+
+  .span-medium {
+    @include span( 'span-medium');
+    line-height: normal;
+    padding: 5px 10px;
+  }
+
+  &.bar {
+    padding: 0;
+    display: block;
+    height: auto;
+    background-size: 100% 0px;
+  }
+
+  h2.footer-title {
+    @include footer-item( 'footer-title');
+    margin-bottom: 0;
+    padding: 10px;
+  }
+
+  .footer-subtitle {
+    @include footer-item( 'footer-subtitle');
+  }
+
+  .footer-half {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+
+  .footer-content {
+    position: relative;
+    display: table;
+    width: 100%;
+    clear: both;
+    padding: 10px;
+
+    .footer-title {
+      @include footer-item( 'footer-title');
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    .button-default {
+      @include button( 'button-default');
+    }
+  }
+}

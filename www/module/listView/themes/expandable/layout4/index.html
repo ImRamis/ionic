@@ -1,0 +1,28 @@
+<!-- Theme Centered with header -->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <ion-list>
+    <!-- Centered with header Heeader-->
+    <div class="container-hearder-image text-center">
+      <div class="header-title">{{listViewController.data.title}}</div>
+    </div>
+    <!-- Centered with header Content-->
+    <ul class="collapsible" data-collapsible="expandable">
+      <li ng-repeat="group in listViewController.data.items">
+        <ion-item class="collapsible-header item-bcg">
+          <i class="icon-small icon {{group.icon}}"></i>
+          <h2 class="item-title">{{group.title}}</h2>
+        </ion-item>
+        <!-- Centered with header Accordion-->
+        <div class="collapsible-body">
+          <ion-item class="subitem-bcg text-center waves-block waves-effect waves-light transparent"
+            ng-repeat="item in group.items" ng-click="listViewController.onClick('onItemClick', item, $event)">
+            <h2 class="subitem-title">{{item}}</h2>
+          </ion-item>
+        </div>
+      </li>
+    </ul>
+  </ion-list>
+</ion-content>

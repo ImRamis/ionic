@@ -1,0 +1,37 @@
+<!--Theme Category header + product list-->
+<ion-content class="has-header">
+    <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}" on-refresh="listViewController.doRefresh()">
+    </ion-refresher>
+    <!--Category header + product list Content-->
+    <ion-list ng-repeat="group in listViewController.data.items">
+        <ion-item class="item-header header-divider item-divider" ion-affix data-affix-within-parent-with-class="list">
+            <h2 class="header-title">{{group.title}}</h2>
+        </ion-item>
+        <ion-item class="item-bcg"ng-repeat="item in group.items">
+            <!-- Hero-->
+            <img class="full-image" ng-src="{{item.image}}">
+            <!--Gallery-->
+            <div class="gallery">
+                <img ng-src="{{item.image1}}">
+                <img ng-src="{{item.image2}}">
+                <img ng-src="{{item.image3}}">
+                <img ng-src="{{item.image4}}">
+            </div>
+            <!--Content Info-->
+            <div class="content-info">
+                <div class="info-block">
+                    <h2 class="item-title">{{item.title}}</h2>
+                    <p class="span-small">{{item.oldPrice}}</p>
+                    <p class="span-medium left">{{item.newPrice}}</p>
+                    <p class="description left">{{item.description}}</p>
+                </div>
+                <div class="info-block">
+                    <button class="button-default waves-effect btn-flat right"
+                    ng-click="listViewController.onClick('onBuy', item, $event)">
+                    {{item.button}}
+                  </button>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

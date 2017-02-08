@@ -1,0 +1,21 @@
+<!-- Themes Medium item with avatar -->
+<ion-content class="has-header">
+  <!-- Themes Medium item with avatar Refresher -->
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!-- Social List-->
+  <ion-list show-reorder="true">
+    <ion-item class="item-bcg item-avatar-left"
+    ng-repeat="item in listViewController.data.items" n
+    g-click="listViewController.onClick('onItemClick', item, $event)">
+      <img ng-src="{{item.image}}" alt="{{item.title}}" />
+      <div class="item-title">{{item.title}}</div>
+      <div class="item-subtitle">{{item.description}}</div>
+      <!-- Dragen And Drop Social Reorde Button-->
+      <ion-reorder-button class="icon {{item.rightIcon}}"
+      on-reorder="listViewController.reorderItem($fromIndex, $toIndex)">
+      </ion-reorder-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

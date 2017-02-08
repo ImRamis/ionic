@@ -1,0 +1,38 @@
+<!-- Themes Products + CTA header -->
+<ion-header-bar class="bar bar-subheader container-hearder-image">
+  <!-- Products + CTA header-->
+  <div class="half">
+    <h1 class="header-title">{{listViewController.data.title}}</h1>
+    <h2 class="header-subtitle">{{listViewController.data.description}}</h2>
+  </div>
+  <div class="half">
+    <span class="span-large right">{{listViewController.data.price}}</span>
+    <button class="button-default waves-effect btn right waves-effect waves-light"
+    ng-click="listViewController.onClick('onProceed', item, $event)">
+        {{listViewController.data.buttonText}}
+      </button>
+  </div>
+</ion-header-bar>
+<!-- Products + CTA header Content-->
+<ion-content class="drag-and-drop">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!-- Products + CTA header List-->
+  <ion-list show-reorder="true">
+    <ion-item class="item-bcg item-complex item-thumbnail-left item-icon-right"
+    ng-click="listViewController.onClick('onItemClick', item, $event)"
+      ng-repeat="item in listViewController.data.items" >
+      <img ng-src="{{item.image}}" />
+      <h2 class="item-title">{{item.title}}</h2>
+      <div class="span-small text-right">{{item.oldPrice}}</div>
+      <div class="span-medium text-right">{{item.newPrice}}</div>
+      <!-- Products + CTA header Seller And Shipping-->
+      <h3 class="item-subtitle left">{{item.seller}} {{item.mark}}</h3>
+      <h3 class="item-subtitle right">Free shipping</h3>
+      <ion-reorder-button class="button-default icon {{item.rightIcon}}"
+        on-reorder="listViewController.reorderItem($fromIndex, $toIndex)">
+      </ion-reorder-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

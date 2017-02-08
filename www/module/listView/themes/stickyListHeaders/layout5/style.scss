@@ -1,0 +1,36 @@
+//*  # Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Theme Simple header with simple list
+===========================================*/
+.item-divider {
+  &.header-divider {
+    @include header( 'header-divider');
+    z-index: 9;
+  }
+
+  h2.header-title {
+    @include header( 'header-title');
+    padding: 0 30px;
+  }
+}
+
+.item-bcg {
+  @include item( 'item-bcg');
+
+  h2.item-title {
+    @include item( 'item-title');
+    line-height: 37px;
+  }
+
+  &.activated {
+    border-color: transparent;
+  }
+
+  .icon-small {
+    @include icon( 'icon-small');
+  }
+
+  img {
+    border-radius: $border-radius !important;
+  }
+}

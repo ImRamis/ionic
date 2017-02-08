@@ -1,0 +1,33 @@
+/*  # Theme Medium item with avatar
+===========================================*/
+.item-bcg {
+  background-color: #424242 !important;
+  border-color: #202020 !important; }
+  .item-bcg .item-content {
+    padding-left: 100px;
+    min-height: 84px;
+    padding-top: 20px;
+    background-color: transparent; }
+    .item-bcg .item-content .item-title {
+      color: #fcd736;
+      font-size: 20px; }
+    .item-bcg .item-content .item-subtitle {
+      color: rgba(254, 254, 254, 0.6);
+      font-size: 12px; }
+  .item-bcg img {
+    max-width: 64px !important;
+    max-height: 64px !important;
+    top: 10px !important; }
+
+/*  #Reorder Button Style
+==========================================*/
+.item-right-edit {
+  background-color: transparent; }
+  .item-right-edit.visible.active {
+    background-color: transparent !important; }
+  .item-right-edit.item-reorder {
+    padding: 0; }
+    .item-right-edit.item-reorder .button.icon {
+      font-size: 32px !important;
+      color: #fcd736 !important;
+      right: 0; }

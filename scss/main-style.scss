@@ -57,12 +57,13 @@ $font-size-text:(
 
 // Global Colors
 $palettes: (
-    mainColors: (
+    mainColors: ( // Also used for backgrounds.
 
-        primary:   #00887A, // Used for toolbars
-        secondary:  #81C784, // Used for various small elements
-        accent:   #00BEA4 //Used for icon-search-bar, loaders-spinners, checkbox-item, icon, button, span, input-field-icons
+        primary:   #424242, // Used for toolbars
+        secondary:  #FCD736, // Used for various small elements
+        accent:   #202020 //Used for icon-search-bar, loaders-spinners, checkbox-item, icon, button, span, input-field-icons
     ),
+
 
     backgrounds: ( // Used for card-bcg, swipe-item-bcg, form-block, search-bcg, text-view-bcg, footer-bcg
 
@@ -77,11 +78,10 @@ $palettes: (
         secondary: #BDBCBC, // Used for text colors in: buttons, header-title, subitem-title, subitem-subtitle
         accent:   #ffffff // Used for text colors in: header-title, header-subtitle
     ),
+blendModes: ( // Used for blend modes
 
-    blendModes: ( // Used for blend modes
         primary:  #ffffff,
-        secondary: #424242,
-        accent:   #ef4437
+        secondary: #424242
     )
 );
 

@@ -1,0 +1,62 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Thema Full width image
+================================================*/
+.list {
+  padding-top: 0;
+
+  h2.item-title {
+    @include item( 'item-title');
+    margin: 0;
+  }
+
+  h3.item-subtitle {
+    @include item( 'item-subtitle');
+    margin: 0;
+  }
+}
+
+.slider {
+  height: 150px;
+  border-bottom: 1px solid theme-colors('mainColors', 'secondary');
+  text-align: center;
+
+  .item-images {
+    @include darkening-blend-mode;
+    @include background-size;
+    display: table;
+    width: 100%;
+    height: 150px;
+
+    .item-text-wrap {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      z-index: 9;
+      position: relative;
+    }
+  }
+}
+
+.swiped-item-bcg {
+  @include swiped-item( 'swiped-item-bcg');
+  display: table;
+  height: 150px;
+
+  h2.swiped-item-title {
+    @include swiped-item( 'swiped-item-title');
+  }
+
+  a {
+    display: table-cell;
+    vertical-align: bottom;
+    color: theme-colors('textColors', 'primary');
+    width: 90px;
+    padding: 15px;
+  }
+
+  .swiped-item-title {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

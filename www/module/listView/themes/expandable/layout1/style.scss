@@ -1,0 +1,68 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  Theme List big image
+===========================================*/
+.collapsible {
+  margin: 0;
+  border: none;
+
+  .collapsible-header {
+    padding: 0;
+    border: none;
+
+    .social {
+      @include social;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    .item-bcg {
+      @include item( 'item-bcg');
+      padding-left: 190px;
+      min-height: 170px;
+      padding-top: 20px;
+
+      img {
+        top: 0 !important;
+        left: 0!important;
+        max-height: 100% !important;
+        max-width: 170px !important;
+      }
+
+      h2.item-title {
+        @include item(item-title);
+      }
+
+      h3.item-subtitle {
+        @include item(item-subtitle);
+      }
+    }
+  }
+
+  .collapsible-body {
+    border: none;
+
+    .subitem-bcg {
+      @include subitem( 'subitem-bcg');
+      border: none;
+
+      img {
+        border-radius: $border-radius;
+      }
+
+      .subitem-title {
+        padding-top: 20px;
+        @include subitem( 'subitem-title');
+      }
+
+      h3.subitem-subtitle {
+        @include subitem( 'subitem-subtitle');
+      }
+
+      .icon-medium {
+        @include icon( 'icon-medium');
+      }
+    }
+  }
+}

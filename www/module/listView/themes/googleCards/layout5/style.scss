@@ -1,0 +1,63 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Theme Styled cards 2
+===========================================*/
+.slider {
+  height: auto;
+}
+/*  #Content
+===========================================*/
+.card {
+  margin: 10px;
+  text-align: right;
+  background-color: transparent;
+
+  .card-image {
+    @include darkening-blend-mode;
+
+    &::before {
+      z-index: 3;
+    }
+
+    img {
+      @include images;
+    }
+
+    h2.card-title {
+      right: 0 !important;
+      left: auto !important;
+      @include item-card( 'card-title');
+      z-index: 4;
+    }
+  }
+
+  &.card-bcg {
+    @include item-card( 'card-bcg');
+  }
+
+  .card-subtitle {
+    @include item-card( 'card-subtitle');
+    padding-bottom: 10px;
+  }
+
+  .card-body-text {
+    @include item-card( 'card-body-text');
+  }
+
+  .card-action {
+    border-top: none !important;
+    padding: 0 !important;
+
+    .button-default {
+      @include button( 'button-default');
+      font-weight: normal;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      line-height: 28px;
+    }
+
+    a:last-child {
+      margin-right: 5px;
+    }
+  }
+}

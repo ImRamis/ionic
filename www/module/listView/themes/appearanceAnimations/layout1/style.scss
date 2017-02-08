@@ -1,0 +1,30 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+
+/*  #Theme Appearance animation (Alpha)
+================================================*/
+.item {
+  &.item-bcg {
+    @include item('item-bcg');
+  }
+  h2.item-title {
+      @include item('item-title');
+      line-height: 35px
+  }
+  .icon-small {
+      @include icon('icon-small');
+  }
+}
+/*  #Theme Appearance animation (Alpha) fadeIn
+================================================*/
+
+.chat-item.ng-enter {
+    -webkit-animation: fadeIn 500ms;
+    -moz-animation: fadeIn 500ms;
+    -o-animation: fadeIn 500ms;
+    animation: fadeIn 500ms;
+}
+.chat-item.ng-enter-stagger {
+    -webkit-animation-delay: 50ms;
+    animation-delay: 50ms;
+}

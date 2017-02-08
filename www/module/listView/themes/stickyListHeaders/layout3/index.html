@@ -1,0 +1,32 @@
+<!--Theme Small header + medium item-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!-- Small header + medium item HEADER-->
+  <ion-list ng-repeat="group in listViewController.data.items">
+    <ion-item class="item-divider header-divider" ion-affix data-affix-within-parent-with-class="list">
+      <h2 class="header-title left">{{group.title}}</h2>
+      <span class="span-small right">{{group.description}}</span>
+      <i class="icon-small icon {{group.icon}} right"></i>
+    </ion-item>
+    <!--Small header + medium item Content-->
+    <ion-item class="item-avatar-right item-bcg" ng-repeat="item in group.items">
+      <img ng-src="{{item.image}}" alt="{{item.title}}"
+      ng-click="listViewController.onClick('onImage', item, $event)" />
+      <div class="social left">
+        <i class="icon {{item.iconLike}}"
+        ng-click="listViewController.onClick('onLike', item, $event)"></i>
+        <i class="icon {{item.iconBookmark}}"
+        ng-click="listViewController.onClick('onBookmark', item, $event)"></i>
+        <i class="icon {{item.iconShare}}"
+        ng-click="listViewController.onClick('onShare', item, $event)"></i>
+      </div>
+      <div class="item-title right">{{item.title}}</div>
+      <!--Small header + medium item Content Text-->
+      <div class="item-body">
+        <div class="item-body-text">{{item.description}}</div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

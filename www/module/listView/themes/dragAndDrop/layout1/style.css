@@ -1,0 +1,66 @@
+/*  #Theme Small item + header
+================================================*/
+.icon-medium {
+  color: rgba(252, 215, 54, 0.6) !important;
+  font-size: 32px !important; }
+
+/*  #Theme Header
+================================================*/
+.header-bcg {
+  height: auto;
+  padding: 20px;
+  background-color: #fcd736;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+  .header-bcg .item {
+    display: table;
+    border: none;
+    width: 100%;
+    padding: 0; }
+  .header-bcg .half {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px; }
+    .header-bcg .half h1.header-title {
+      color: #424242;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin-bottom: 0; }
+    .header-bcg .half h2.header-subtitle {
+      color: #424242;
+      font-size: 14px; }
+    .header-bcg .half .icon-medium {
+      color: #424242 !important;
+      font-size: 32px !important; }
+    .header-bcg .half .span-medium {
+      color: #424242 !important;
+      font-size: 24px; }
+
+/*  #Theme Content
+================================================*/
+.drag-and-drop {
+  top: 136px !important; }
+  .drag-and-drop .item-bcg {
+    background-color: #424242 !important;
+    border-color: #202020 !important; }
+  .drag-and-drop .item-title {
+    color: #fcd736;
+    font-size: 20px;
+    line-height: normal; }
+  .drag-and-drop .item-subtitle {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px;
+    line-height: normal; }
+  .drag-and-drop .list i.icon {
+    font-size: 30px; }
+  .drag-and-drop .item-complex .item-content {
+    padding-left: 70px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: transparent; }
+  .drag-and-drop .enable-pointer-events,
+  .drag-and-drop .item-radio .item-content {
+    background-color: transparent; }
+
+.item-right-edit {
+  background-color: transparent; }

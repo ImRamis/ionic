@@ -15,8 +15,8 @@ angular.module('controllers', [])
             'theme': "layuot3"
         }
     }])
-    
-    .controller('tourCtrl', ['$scope', '$location', function($scope, $location) {
+
+.controller('tourCtrl', ['$scope', '$location', function($scope, $location) {
         $scope.params = {
             'data': {
                 'containerBodyImage': 'img/back.jpg',
@@ -28,7 +28,7 @@ angular.module('controllers', [])
                         iconSlider: 'icon-star-outline',
                         title: 'Welcome to the World Tour',
                         buttonNext: 'Next',
-                        description:'i got this feeling of noo no no '
+                        description: 'i got this feeling of noo no no '
                     },
                     {
                         logo: '',
@@ -36,7 +36,7 @@ angular.module('controllers', [])
                         title: 'Important',
                         buttonNext: 'Next',
                         buttonPrevious: 'Previous',
-                        description:'i got this feeling of noo no no '
+                        description: 'i got this feeling of noo no no '
                     },
                     {
                         logo: '',
@@ -44,7 +44,7 @@ angular.module('controllers', [])
                         title: 'Nothing',
                         buttonPrevious: 'Previous',
                         buttonFinish: 'Finish',
-                        description:'i got this feeling of noo no no '
+                        description: 'i got this feeling of noo no no '
                     }
                 ]
             },
@@ -56,21 +56,31 @@ angular.module('controllers', [])
             'theme': "layout1"
         }
     }])
-    .controller('searchCtrl', ['$scope', '$state', 'apiService', '$window','$ionicLoading', function($scope, $state, apiService, $window,$ionicLoading) {
-        $scope.invalid = 'Please Select';
-        $scope.saveLocation = function(search) {
-            $window.localStorage['region'] = search.region;
-            $window.localStorage['subregion'] = search.subregion;
+    .controller('searchCtrl', ['$scope', '$state', 'apiService', '$window', '$ionicLoading', '$document', function($scope, $state, apiService, $window, $ionicLoading, $document) {
+        $scope.search = [];
+        $scope.doRefresh = function() {
+            $ionicLoading.show({ template: 'Loading' });
+            apiService.getData('region').then(function success(response) { $scope.region = response.data; })
+            apiService.getData('region_areas').then(function success(response) {
+                $scope.subregion = response.data;
+                $ionicLoading.hide();
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        };
+        temp= true;
+        $scope.onClick = function(Name) {
+            $scope.search.region = Name.ID;
+         if (!temp){       angular.element($document[0].getElementsByClassName('collapsible-body')).slideUp(); temp=true;}
+          else{  angular.element($document[0].getElementById(Name.REGION)).slideDown(); temp=false;}
+        };
+        $scope.onSubClick = function(item) {
+            $window.localStorage['region'] = $scope.search.region;
+            $window.localStorage['subregion'] = $scope.search.subregion;
             $state.go('skill');
         };
-        var g = function(){
-        $ionicLoading.show({ template: 'Loading' });
-        apiService.getData('region').then(function success(response) { $scope.region = response.data; })
-        apiService.getData('region_areas').then(function success(response) { $scope.subregion = response.data; $ionicLoading.hide(); })
-    };
-    g();
+  $scope.doRefresh();
     }])
-    .controller('skillCtrl', ['$scope', '$state', 'apiService','$ionicLoading', function($scope, $state, apiService,$ionicLoading) {
+    .controller('skillCtrl', ['$scope', '$state', 'apiService', '$ionicLoading', function($scope, $state, apiService, $ionicLoading) {
         $scope.fetchSkills = function() {
             $ionicLoading.show({ template: 'Loading' });
             apiService.getData('occupation').then(function success(response) {

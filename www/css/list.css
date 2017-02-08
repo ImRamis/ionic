@@ -1,14 +1,59 @@
 /*  # Theme Simple header with simple list
 ===========================================*/
 .item-divider.header-divider {
-  background: #00bea4;
-  background: -moz-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
-  background: -webkit-linear-gradient(45deg, #00bea4 0%, #81c784 100%);
-  background: linear-gradient(45deg, #00bea4 0%, #81c784 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bea4', endColorstr='#81c784',GradientType=1 );
+  background: #FCD736;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid transparent;
   z-index: 9; }
+
+.bar.bar-stable .title, .item h2, .item h3, a, body, h1, h2, h3, h4, h5, h6, label, p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.button:after {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    content: ' ';
+}
+.bar.bar-stable .title {
+    color: #424242;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 20px;
+    left: 40px !important;
+    text-align: left;
+    padding-top: 2px;
+}
+.bar.bar-stable .button {
+    padding: 0 5px;
+    color: #424242;
+}
+
+hearder-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bar.bar-stable {
+    background-color: #f0cd35 !important;
+    height: 56px;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.container-hearder-image {
+    height: 145px;
+    display: table;
+    width: 100%;
+    background-color: white;
+    background-blend-mode: luminosity;
+    position: relative;
+}
+
 
 .item-divider h2.header-title {
   color: white;
@@ -17,18 +62,18 @@
   padding: 0 30px; }
 
 .item-bcg {
-  background-color: rgba(244, 245, 245, 0.8) !important;
+  background-color: rgba(66,66,66) !important;
   border-width: 0;
   margin: 0;
   transition: all 0s ease-out; }
   .item-bcg h2.item-title {
-    color: #7fcac3;
+    color: #ffffff;
     font-size: 14px;
     line-height: 37px; }
   .item-bcg.activated {
     border-color: transparent; }
   .item-bcg .icon-small {
-    color: #00bea4 !important;
+    color: #FCD736 !important;
     font-size: 20px !important; }
   .item-bcg img {
     border-radius: 4px !important; }

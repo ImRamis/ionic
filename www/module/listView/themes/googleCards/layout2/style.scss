@@ -1,0 +1,72 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  #Theme Products cards
+===========================================*/
+.slider {
+  height: auto;
+}
+
+.card-bcg {
+  @include item-card( 'card-bcg');
+  padding: 0 5px 5px;
+  margin: 5px 10px;
+
+  h2.card-title {
+    @include item-card( 'card-title');
+    margin: 0;
+  }
+
+  .container-background {
+    @include darkening-blend-mode;
+    position: relative;
+    height: 120px;
+    display: table;
+    width: 100%;
+
+    .half {
+      display: table-cell;
+      vertical-align: bottom;
+      padding: 10px;
+      position: relative;
+
+      .price {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: font-size-text('h1');
+        color: theme-colors('textColors', 'primary');
+      }
+
+      p.card-body-text {
+        @include item-card( 'card-body-text');
+        margin: 0;
+      }
+    }
+
+    .button-default {
+      @include button( 'button-default');
+    }
+  }
+
+  .card-header {
+    h2.card-title {
+      @include item-card( 'card-title');
+      margin-bottom: 0;
+    }
+
+    h3.card-subtitle {
+      @include item-card( 'card-subtitle');
+      margin: 5px 10px;
+    }
+
+    & > .card-title:first-child {
+      margin: 5px 10px;
+    }
+
+    h2.card-title {
+      @include item-card( 'card-title');
+      clear: both;
+      margin-bottom: 10px;
+    }
+  }
+}

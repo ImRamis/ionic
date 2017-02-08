@@ -1,0 +1,66 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Themes Medium item with image
+===========================================*/
+.item-bcg {
+  @include item( 'item-bcg');
+
+  h2.item-title {
+    @include item( 'item-title');
+  }
+
+  h3.item-subtitle {
+    @include item( 'item-subtitle');
+  }
+
+  .item-content {
+    background-color: transparent;
+    padding-right: 175px;
+    height: 100px;
+  }
+
+  .item-img {
+    @include darkening-blend-mode;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 160px !important;
+    height: 100px !important;
+  }
+
+  span {
+    position: absolute;
+    float: right;
+    top: 70px;
+    right: 195px;
+
+    .span-medium {
+      @include span( 'span-medium');
+      line-height: 24px;
+    }
+
+    .icon-small {
+      @include icon( 'icon-small');
+      display: block;
+      float: left;
+    }
+  }
+}
+/*  #Reorder Button Style
+==========================================*/
+.item-right-edit {
+  background-color: transparent;
+
+  &.visible.active {
+    background-color: transparent !important;
+  }
+
+  &.item-reorder {
+    padding: 0;
+
+    .button.icon {
+      color: theme-colors('mainColors', 'secondary') !important;
+      right: 0;
+    }
+  }
+}

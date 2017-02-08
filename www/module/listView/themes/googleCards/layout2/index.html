@@ -1,0 +1,38 @@
+<!--Theme Products cards-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!--Products cards Content List-->
+  <ion-list>
+    <ion-slide-box on-slide-changed="listViewController.deleteItem(key, true)"
+    show-pager="false" ng-click="listViewController.onClick('onItemClick', item, $event)"
+    ng-repeat="(key, item) in listViewController.data.items">
+      <ion-slide>
+        <!--Products cards-->
+        <div class="card card-bcg">
+          <div class="card-header">
+            <h3 class="card-subtitle right">{{item.title}}</h3>
+            <h2 class="card-title">{{item.description}}</h2>
+          </div>
+          <div class="container-background" style="background-image: url({{item.image}})">
+            <div class="half">
+              <p class="card-body-text">{{item.longDescription}}</p>
+              <h2 class="card-title">{{item.shortDescription}}</h2>
+            </div>
+            <div class="half">
+              <span class="price">{{item.price}}</span>
+              <button class="btn button-default waves-effect waves-light"
+              ng-click="listViewController.onClick('onBuy', item, $event)">
+                  {{item.button}}
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--End Products cards-->
+      </ion-slide>
+      <ion-slide>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-list>
+</ion-content>

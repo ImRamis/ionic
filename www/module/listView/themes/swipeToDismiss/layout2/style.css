@@ -1,0 +1,108 @@
+/*  #Theme Products + CTA footer
+===========================================*/
+.slider {
+  height: auto;
+  border-bottom: 1px solid #202020; }
+
+.swipe-list .list {
+  padding-bottom: 120px; }
+
+.swipe-list .item-bcg {
+  background-color: #424242 !important;
+  border-color: #202020 !important;
+  padding-right: 80px;
+  min-height: 82px; }
+  .swipe-list .item-bcg img {
+    top: 0 !important;
+    left: 0 !important; }
+  .swipe-list .item-bcg h2.item-title {
+    color: #fcd736;
+    font-size: 20px; }
+  .swipe-list .item-bcg h3.item-subtitle {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px;
+    margin: 0; }
+
+.swipe-list .new-price {
+  position: absolute;
+  right: 5px;
+  top: 40px; }
+  .swipe-list .new-price.span-medium {
+    color: #fcd736;
+    font-size: 24px; }
+
+.swipe-list .old-price {
+  font-weight: 400;
+  top: 20px;
+  position: absolute;
+  right: 5px;
+  text-decoration: line-through; }
+  .swipe-list .old-price.span-small {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px; }
+
+.swipe-list .swiped-item-bcg {
+  background-color: rgba(66, 66, 66, 0.6) !important;
+  width: 100%;
+  display: table;
+  height: 80px; }
+  .swipe-list .swiped-item-bcg i.icon {
+    font-size: 32px !important;
+    color: #fcd736; }
+  .swipe-list .swiped-item-bcg .swiped-item-title {
+    color: white;
+    font-size: 12px !important; }
+  .swipe-list .swiped-item-bcg h2.swiped-item-title {
+    margin: 0; }
+  .swipe-list .swiped-item-bcg a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+  .swipe-list .swiped-item-bcg a:first-child {
+    width: 70%; }
+
+/*  #Fixed block
+===========================================*/
+.footer-bcg {
+  background-color: #424242 !important; }
+  .footer-bcg .span-medium {
+    color: #fcd736;
+    font-size: 24px;
+    line-height: normal;
+    padding: 5px 10px; }
+  .footer-bcg.bar {
+    padding: 0;
+    display: block;
+    height: auto;
+    background-size: 100% 0px; }
+  .footer-bcg h2.footer-title {
+    color: #fcd736;
+    font-size: 16px !important;
+    line-height: normal !important;
+    margin-bottom: 0;
+    padding: 10px; }
+  .footer-bcg .footer-subtitle {
+    color: #fcd736;
+    font-size: 14px !important;
+    line-height: normal !important; }
+  .footer-bcg .footer-half {
+    display: table-cell;
+    vertical-align: bottom; }
+  .footer-bcg .footer-content {
+    position: relative;
+    display: table;
+    width: 100%;
+    clear: both;
+    padding: 10px; }
+    .footer-bcg .footer-content .footer-title {
+      color: #fcd736;
+      font-size: 16px !important;
+      line-height: normal !important;
+      margin-top: 10px;
+      padding: 0; }
+    .footer-bcg .footer-content .button-default {
+      background-color: #fcd736 !important;
+      color: #202020 !important;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 4px; }

@@ -1,0 +1,20 @@
+<!--Theme Appearance animation (Random)-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!--Appearance animation (Random)-->
+  <ion-list>
+    <ion-item class="item-avatar item-icon-right item-bcg"
+    ng-class="listViewController.animationClass" ng-click="listViewController.onClick('onFavorite', item, $event)"
+    ng-repeat="item in listViewController.animationItems">
+      <img ng-src="{{item.image}}" alt="{{item.title}}" />
+      <h2 class="item-title">{{item.title}}</h2>
+      <i class="icon-small icon" ng-class="{'icon-heart': item.favorite, 'icon-heart-outline': !item.favorite}"></i>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll ng-if="!listViewController.noMoreItemsAvailable"
+  on-infinite="listViewController.loadMore()" distance="0%">
+</ion-infinite-scroll>
+</ion-content>

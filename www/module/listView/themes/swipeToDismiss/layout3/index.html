@@ -1,0 +1,31 @@
+<!-- Themes Swipe To Dismiss Large item with text -->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+</ion-refresher>
+  <!-- Swipe To Dismiss Large item with text List-->
+  <ion-list>
+    <ion-slide-box on-slide-changed="listViewController.slideHasChanged($index, item)"
+    show-pager="false" ng-repeat="item in listViewController.data.items" type="item-text-wrap">
+      <ion-slide ng-click="listViewController.onClick('onItemClick', item, $event)">
+        <ion-item class="item-avatar item-text-wrap item-bcg">
+          <img ng-src="{{item.image}}" alt="{{item.title}}" />
+          <h2 class="item-title">{{item.title}}</h2>
+          <p class="item-body-text">{{item.description}}</p>
+        </ion-item>
+      </ion-slide>
+      <ion-slide>
+        <div class="swiped-item-bcg text-center">
+          <a href="#" ng-click="listViewController.deleteItem($index)">
+            <h2 class="swiped-item-title">{{item.message}}</h2>
+          </a>
+          <a href="#" ng-click="listViewController.undo(true)">
+            <i class="icon {{item.iconUndo}}"></i>
+            <p>{{item.undo}}</p>
+          </a>
+        </div>
+      </ion-slide>
+      <ion-slide></ion-slide>
+    </ion-slide-box>
+  </ion-list>
+</ion-content>

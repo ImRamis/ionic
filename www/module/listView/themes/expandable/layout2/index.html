@@ -1,0 +1,31 @@
+<!-- Themes Expandable Full image with CTA -->
+<ion-content class="has-header">
+  <!-- Themes Expandable Full image with CTA Refresher-->
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()">
+  </ion-refresher>
+  <!-- Expandable Full image with CTA  List-->
+  <ul class="collapsible" data-collapsible="expandable">
+    <li ng-repeat="group in listViewController.data.items">
+      <!-- Expandable Full image with CTA Header-->
+      <div class="collapsible-header">
+        <div class="container-background" style="background-image: url({{group.image}});">
+          <div class="half">
+            <h2 class="item-title">{{group.title}}</h2>
+          </div>
+          <div class="half">
+            <button class="button-default waves-effect waves-light btn-flat right">{{group.button}}</button>
+          </div>
+        </div>
+      </div>
+      <!-- Expandable Full image with CTA Body -->
+      <div class="collapsible-body">
+        <ion-item class="button-default item-icon-right waves-effect waves-light waves-block"
+        ng-repeat="item in group.items" ng-click="listViewController.onClick('onPay', item, $event)">
+        {{item}}
+          <i class="icon-small icon icon-chevron-right"></i>
+        </ion-item>
+      </div>
+    </li>
+  </ul>
+</ion-content>

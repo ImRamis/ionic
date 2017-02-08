@@ -1,0 +1,58 @@
+/*  # Thema Category header + product list
+===========================================*/
+.item-divider.header-divider {
+  background-color: #fcd736;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border: none; }
+
+.item-divider h2.header-title {
+  color: #424242;
+  font-size: 24px; }
+
+.item-bcg {
+  background-color: #424242 !important;
+  border-color: #202020 !important;
+  z-index: 9;
+  /*  #Gallery Style
+  ===========================================*/
+  /*  #Contact Info Style
+  ===========================================*/ }
+  .item-bcg img {
+    border-radius: 4px; }
+  .item-bcg .gallery {
+    margin-bottom: 10px;
+    overflow: hidden; }
+    .item-bcg .gallery img {
+      width: 24% !important;
+      display: block;
+      float: left;
+      margin-left: 4px; }
+    .item-bcg .gallery img:first-child {
+      margin-left: 0; }
+  .item-bcg .content-info {
+    display: table;
+    width: 100%; }
+    .item-bcg .content-info .description {
+      font-size: 12px;
+      color: rgba(252, 215, 54, 0.6);
+      margin-left: 20px;
+      line-height: 25px; }
+    .item-bcg .content-info .span-small {
+      color: rgba(254, 254, 254, 0.6);
+      font-size: 12px; }
+    .item-bcg .content-info .span-medium {
+      color: #fcd736;
+      font-size: 24px;
+      font-weight: bold; }
+    .item-bcg .content-info .info-block {
+      display: table-cell;
+      vertical-align: bottom; }
+      .item-bcg .content-info .info-block h2.item-title {
+        color: #fcd736;
+        font-size: 20px; }
+      .item-bcg .content-info .info-block .button-default {
+        background-color: #fcd736 !important;
+        color: #202020 !important;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 4px; }

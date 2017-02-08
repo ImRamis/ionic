@@ -1,0 +1,43 @@
+/*  #Theme Large item with text
+===========================================*/
+.slider {
+  height: 150px;
+  border-bottom: 1px solid #202020; }
+  .slider .list {
+    padding-top: 0; }
+  .slider .item-bcg {
+    background-color: #424242 !important;
+    border-color: #202020 !important; }
+  .slider h2.item-title {
+    color: #fcd736;
+    font-size: 20px;
+    padding-top: 10px; }
+  .slider p.item-body-text {
+    color: #fcd736;
+    font-size: 14px;
+    padding-top: 15px; }
+
+.item-text-wrap {
+  min-height: 170px; }
+
+.swiped-item-bcg {
+  background-color: rgba(66, 66, 66, 0.6) !important;
+  height: 100%;
+  margin-bottom: 5px !important;
+  display: table;
+  width: 100%; }
+  .swiped-item-bcg i.icon {
+    font-size: 32px !important;
+    color: #fcd736; }
+  .swiped-item-bcg .swiped-item-title {
+    color: white;
+    font-size: 12px !important; }
+  .swiped-item-bcg a {
+    display: table-cell;
+    vertical-align: middle; }
+  .swiped-item-bcg a:first-child {
+    width: 65%; }
+  .swiped-item-bcg a:last-child {
+    background-color: rgba(32, 32, 32, 0.6) !important; }
+    .swiped-item-bcg a:last-child p {
+      color: #fcd736; }

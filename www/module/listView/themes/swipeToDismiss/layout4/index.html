@@ -1,0 +1,26 @@
+<!--Theme Swipe To Dismiss Full width imag-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+    on-refresh="listViewController.doRefresh()"></ion-refresher>
+    <!--Full width imag-->
+    <ion-list>
+        <ion-slide-box on-slide-changed="listViewController.slideHasChanged($index, item)"
+          show-pager="false" ng-repeat="item in listViewController.data.items">
+            <ion-slide ng-click="listViewController.onClick('onItemClick', item, $event)">
+              <div class="item-images" style="background-image: url('{{item.image}}')">
+                <div class="item-text-wrap">
+                    <h2 class="item-title">{{item.title}}</h2>
+                    <h3 class="item-subtitle">{{item.description}}</h3>
+                </div>
+              </div>
+            </ion-slide>
+            <ion-slide class="swiped-item-bcg">
+                <a ng-click="listViewController.deleteItem($index)">{{item.swipe}}</a>
+                <h2 class="swiped-item-title">{{item.message}}</h2>
+
+                <a ng-click="listViewController.undo(true)">{{item.undo}}</a>
+            </ion-slide>
+            <ion-slide></ion-slide>
+        </ion-slide-box>
+    </ion-list>
+</ion-content>

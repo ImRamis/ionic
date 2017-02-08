@@ -1,0 +1,34 @@
+/*  #Theme Simple small items
+===========================================*/
+.icon-small {
+  color: rgba(252, 215, 54, 0.6) !important;
+  font-size: 20px !important; }
+
+.collapsible {
+  margin: 0;
+  border: none;
+  box-shadow: none; }
+  .collapsible .collapsible-header {
+    padding: 0;
+    border: 0; }
+  .collapsible .active .up {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    right: 10; }
+  .collapsible .collapsible-body {
+    border: none; }
+  .collapsible .item-bcg {
+    background-color: #424242 !important;
+    border-color: #202020 !important; }
+    .collapsible .item-bcg h2.item-title {
+      color: #fcd736;
+      font-size: 20px; }
+  .collapsible .subitem-bcg {
+    background-color: #202020 !important;
+    margin: 0;
+    border: 0; }
+    .collapsible .subitem-bcg h3.subitem-title {
+      color: white;
+      font-size: 14px;
+      line-height: normal; }

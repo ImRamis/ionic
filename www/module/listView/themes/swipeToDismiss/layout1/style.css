@@ -1,0 +1,100 @@
+/*  # Themes Small item + header
+================================================*/
+.slider {
+  height: 63px;
+  margin-bottom: 1px; }
+
+.header-bcg {
+  background-color: #fcd736;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  height: 105px !important;
+  padding: 0;
+  border: none; }
+  .header-bcg .item {
+    padding: 0;
+    border: none; }
+  .header-bcg .social {
+    padding-top: 10px;
+    padding-right: 10px; }
+    .header-bcg .social i.icon {
+      color: #424242;
+      font-size: 20px; }
+  .header-bcg h1.header-title {
+    color: #424242;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-left: 85px;
+    margin-top: 10px;
+    margin-bottom: 0; }
+  .header-bcg h2.header-subtitle {
+    color: #424242;
+    font-size: 14px;
+    margin-left: 85px;
+    font-weight: 300; }
+  .header-bcg .icon-large.icon {
+    font-size: 60px;
+    color: white;
+    float: left;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center; }
+  .header-bcg .span-medium {
+    font-size: 24px;
+    color: #424242;
+    padding-top: 10px;
+    display: inline-block; }
+
+/*  #Content
+===========================================*/
+.swipe-to-dismiss {
+  margin-top: 160px;
+  /*  #Content Settings
+  ===========================================*/ }
+  .swipe-to-dismiss .item-bcg {
+    background-color: #424242 !important;
+    border-color: #202020 !important;
+    padding: 10px 90px 10px 70px;
+    min-height: 64px; }
+    .swipe-to-dismiss .item-bcg h2.item-title {
+      color: #fcd736;
+      font-size: 20px; }
+    .swipe-to-dismiss .item-bcg h3.item-subtitle {
+      color: rgba(254, 254, 254, 0.6);
+      font-size: 12px; }
+    .swipe-to-dismiss .item-bcg .icon-medium {
+      color: rgba(252, 215, 54, 0.6) !important;
+      font-size: 32px !important; }
+    .swipe-to-dismiss .item-bcg img {
+      border-radius: 4px !important;
+      top: 9px !important; }
+    .swipe-to-dismiss .item-bcg .span-small {
+      color: #fcd736;
+      position: absolute;
+      right: 50px;
+      font-size: 10px;
+      top: 22px; }
+  .swipe-to-dismiss .swiped-item-bcg {
+    background-color: rgba(66, 66, 66, 0.6) !important;
+    width: 100%;
+    display: table;
+    height: 63px; }
+    .swipe-to-dismiss .swiped-item-bcg i.icon {
+      font-size: 32px !important;
+      color: #fcd736; }
+    .swipe-to-dismiss .swiped-item-bcg .swiped-item-title {
+      color: white;
+      font-size: 12px !important; }
+    .swipe-to-dismiss .swiped-item-bcg a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+    .swipe-to-dismiss .swiped-item-bcg a:first-child {
+      width: 80%; }
+    .swipe-to-dismiss .swiped-item-bcg h2.swiped-item-title {
+      margin: 0; }
+
+/*  #Ios platform
+===========================================*/
+.platform-ios .swipe-to-dismiss {
+  margin-top: 168px; }

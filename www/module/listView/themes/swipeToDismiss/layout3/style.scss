@@ -1,0 +1,59 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  #Theme Large item with text
+===========================================*/
+.slider {
+  height: 150px;
+  border-bottom: $item-divider-small;
+
+  .list {
+    padding-top: 0;
+  }
+
+  .item-bcg {
+    @include item( 'item-bcg');
+  }
+
+  h2.item-title {
+    @include item( 'item-title');
+    padding-top: 10px;
+  }
+
+  p.item-body-text {
+    @include item( 'item-body-text');
+    padding-top: 15px;
+  }
+}
+
+.item-text-wrap {
+  min-height: 170px;
+}
+
+.swiped-item-bcg {
+  @include swiped-item( 'swiped-item-bcg');
+  height: 100%;
+  margin-bottom: 5px !important;
+  display: table;
+  width: 100%;
+
+  h2.swiped-item-title {
+    @include swiped-item( 'swiped-item-title');
+  }
+
+  a {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  a:first-child {
+    width: 65%;
+  }
+
+  a:last-child {
+    background-color: theme-colors('mainColors', 'accent', 'opacity60') !important;
+
+    p {
+      color: theme-colors('textColors', 'primary');
+    }
+  }
+}

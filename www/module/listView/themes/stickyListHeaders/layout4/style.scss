@@ -1,0 +1,55 @@
+//*  # Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  #Theme Medium header + medium item
+===========================================*/
+.item-divider {
+  padding: 10px;
+
+  &.header-divider {
+    @include header( 'header-divider');
+    z-index: 9;
+  }
+
+  h2.header-title {
+    @include header( 'header-title');
+    padding-right: 45px;
+  }
+
+  .icon-medium {
+    color: theme-colors('mainColors', 'primary', 'opacity60');
+    font-size: icon-size('icon-medium') !important;
+  }
+}
+/*  #Content
+===========================================*/
+.item-bcg {
+  @include item( 'item-bcg');
+  max-height: 80px;
+
+  .icon-small {
+    @include icon( 'icon-small');
+    z-index: 9;
+    position: relative;
+  }
+
+  h2.item-title {
+    @include item( 'item-title');
+    margin-bottom: 10px;
+    z-index: 9;
+    position: relative;
+  }
+
+  p.item-subtitle {
+    @include item( 'item-subtitle');
+    z-index: 9;
+    position: relative;
+  }
+
+  .price {
+    &.span-medium {
+      @include span( 'span-medium');
+      z-index: 9;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<!-- Themes Dragen And Drop Travel -->
+<ion-content class="has-header">
+    <!-- Themes Dragen And Drop Travel Refresher -->
+    <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+      on-refresh="listViewController.doRefresh()">
+    </ion-refresher>
+    <!-- Themes Dragen And Drop Travel List -->
+    <ion-list show-reorder="true">
+        <ion-item class="item-bcg" ng-repeat="item in listViewController.data.items"
+            ng-click="listViewController.onClick('onItemClick', item, $event)">
+            <h2 class="item-title">{{item.title}}</h2>
+            <h3 class="item-subtitle">{{item.description}}</h3>
+            <span><i ng-if="item.icon" class="icon-small {{item.icon}}"></i>
+              <div class="span-medium">{{item.mark}}</div>
+            </span>
+            <div class="item-img" style="background-image: url('{{item.image}}')">
+            </div>
+            <ion-reorder-button class="icon {{item.rightIcon}}"
+              on-reorder="listViewController.reorderItem($fromIndex, $toIndex)">
+            </ion-reorder-button>
+        </ion-item>
+    </ion-list>
+</ion-content>

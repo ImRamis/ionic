@@ -1,0 +1,31 @@
+<!--Theme Swipe To Dismiss Simple small item-->
+<ion-content class="has-header">
+  <ion-refresher pulling-text="{{listViewController.data.refreshMessage}}"
+  on-refresh="listViewController.doRefresh()"></ion-refresher>
+  <!--Theme Swipe To Dismiss Simple small item Content-->
+  <ion-list>
+    <ion-slide-box on-slide-changed="listViewController.slideHasChanged($index, item)"
+    ng-repeat="item in listViewController.data.items" show-pager="false">
+      <ion-slide ng-click="listViewController.onClick('onFavorite', item, $event)">
+        <a class="item item-bcg item-avatar-left item-icon-right waves-effect waves-dark waves-block" href="#">
+          <img ng-src="{{item.image}}" alt="{{item.title}}">
+          <h2 class="item-title">{{item.title}}</h2>
+          <i class="icon-small icon" ng-class="{'icon-heart': item.favorite, 'icon-heart-outline': !item.favorite}"></i>
+        </a>
+      </ion-slide>
+      <ion-slide>
+        <div class="swiped-item-bcg">
+          <a href="#" class="btn-flat disabled text-right"
+          ng-click="listViewController.deleteItem($index)">
+            <h2 class="swiped-item-title">{{item.delete}}</h2>
+          </a>
+          <a href="#" class="btn-flat disabled text-left"
+          ng-click="listViewController.undo(true)">
+            <h2 class="swiped-item-title">{{item.undo}}</h2>
+          </a>
+        </div>
+      </ion-slide>
+      <ion-slide></ion-slide>
+    </ion-slide-box>
+  </ion-list>
+</ion-content>

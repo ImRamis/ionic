@@ -1,0 +1,104 @@
+/*  # Theme Products + CTA header
+==========================================*/
+.container-hearder-image {
+  height: 140px !important;
+  background-color: white;
+  background-blend-mode: luminosity;
+  display: table;
+  width: 100%;
+  border: none; }
+  .container-hearder-image::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    background-color: #424242; }
+  .container-hearder-image .half {
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 5px;
+    z-index: 9999;
+    position: relative; }
+    .container-hearder-image .half .span-large {
+      color: #fcd736;
+      font-size: 24px;
+      margin-bottom: 20px; }
+  .container-hearder-image h1.header-title {
+    color: #fcd736;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0; }
+  .container-hearder-image h2.header-subtitle {
+    color: #fcd736;
+    font-size: 14px;
+    margin: 0; }
+  .container-hearder-image .button-default {
+    background-color: #fcd736 !important;
+    color: #202020 !important;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    clear: both; }
+
+/*  #CONTENT
+==========================================*/
+.drag-and-drop {
+  top: 196px !important; }
+  .drag-and-drop .item-bcg {
+    background-color: #424242 !important;
+    border-color: #202020 !important; }
+  .drag-and-drop h2.item-title {
+    color: #fcd736;
+    font-size: 20px; }
+  .drag-and-drop h3.item-subtitle {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0; }
+  .drag-and-drop .span-medium {
+    color: #fcd736;
+    font-size: 24px;
+    margin-top: 5px; }
+  .drag-and-drop .span-small {
+    color: rgba(254, 254, 254, 0.6);
+    font-size: 12px;
+    text-decoration: line-through; }
+  .drag-and-drop img {
+    max-width: 100px !important;
+    max-height: 102px !important;
+    width: 100px !important;
+    height: 102px !important;
+    left: 0 !important;
+    top: 0 !important; }
+  .drag-and-drop .item-content {
+    padding-bottom: 0;
+    background-color: transparent; }
+
+/*  #Reorder Button Style
+==========================================*/
+.item-right-edit {
+  background-color: transparent;
+  width: 40px;
+  padding-left: 0; }
+  .item-right-edit.item-reorder .button.icon {
+    right: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    background-color: #fcd736 !important;
+    color: #202020 !important;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px; }
+  .item-right-edit .button {
+    min-width: 40px; }
+
+/*  #Ios Style
+==========================================*/
+.platform-ios .content-list {
+  top: 204px !important; }
