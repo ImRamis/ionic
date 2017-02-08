@@ -1,11 +1,6 @@
 /*  #Thema Down + fade in + Ken Burns
 ===========================================*/
 #splash-background-image .splash-screen {
-  animation: splashScreen 40s ease infinite;
-  -ms-animation: splashScreen 40s ease infinite;
-  -webkit-animation: splashScreen 40s ease infinite;
-  -o-animation: splashScreen 40s ease infinite;
-  -moz-animation: splashScreen 40s ease infinite;
   width: 100%;
   position: fixed;
   left: 0;
@@ -22,7 +17,7 @@
     transform: scale(2, 2) translate(10px, 10px); } }
 
 .logo-down {
-  max-width: 100px;
+  max-width: 150px;
   position: relative;
   margin-top: 40% !important;
   left: 50%;
@@ -37,8 +32,9 @@
 
 .item-fade-in h2 {
   position: relative;
-  color: #00887a !important;
-  font-size: 36px;
+  color: #201000 !important;
+  font-size: 26px;
+  font-weight: 500;
   margin-top: 10px;
   text-align: center;
   animation: zoomIn 5s;
@@ -57,7 +53,7 @@
 .button-fade-in {
   animation-name: buttons;
   animation-iteration-count: 1;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
   

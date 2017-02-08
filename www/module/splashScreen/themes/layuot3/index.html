@@ -1,19 +1,49 @@
+<style>
+  .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: dimgray;
+    text-align: center;
+    letter-spacing: .5px;}
+
+.downbut{
+  position: absolute;
+  top: 500px;
+  left: 100px;
+}
+.batt {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+}
+
+.disclaim {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    color: blue;
+}
+</style>
+
+
 <!--Theme Down + fade in + Ken Burns-->
-<ion-content class="has-header" scroll="false">
-  <div id="splash-background-image">
+
+<ion-content style="background-color: #FCD736;" class="has-header" scroll="false">
+  <div id="">
     <img class="splash-screen" ng-src="{{splashScreenController.data.backgroundImage}}">
     <img class="logo-down" ng-src="{{splashScreenController.data.logo}}" alt="Image not available" />
     <div class="item-fade-in">
-      <h2>{{splashScreenController.data.title}}</h2>
+      <h2 >{{splashScreenController.data.title}}</h2>
     </div>
     <div class="button-fade-in center">
-            <button ng-click="splashScreenController.tour()"  class="btn waves-effect waves-dark ng-binding">
-                Take a Tour
-            </button>
+            
             <button ng-click="splashScreenController.search()" class="btn waves-effect waves-dark ng-binding">
                 Set Location
             </button>
     </div>
   </div>
+<button ng-click="splashScreenController.tour()"  class="batt button button-clear button-positive ">
+                How It Works
+            </button>
+            <div class="disclaim" >   <p>Disclaimer: By using this app you hereby agree to the rules and regulations abided.However the rights offered can only be seen by the unseen.  </p> </div>
 </ion-content>
-

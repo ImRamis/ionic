@@ -7,9 +7,9 @@ angular.module('controllers', [])
         $scope.params = {
             'data': {
                 'duration': 3000,
-                'backgroundImage': 'img/31.jpg',
-                'logo': 'img/login-universal-light.png',
-                'title': 'WorkFellas',
+                'backgroundImage': '',
+                'logo': 'img/logo.png',
+                'title': "IT'S NEVER BEEN SO EASY",
                 'url': $scope.url
             },
             'theme': "layuot3"
