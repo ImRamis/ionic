@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'ion-affix', 'ngSplashScreen', 'ngParallax',
                 templateUrl: 'templates/profile.html',
                 controller: 'profileCtrl'
             });
-        $urlRouterProvider.otherwise('/search');
+        $urlRouterProvider.otherwise('/app');
     })
     .filter('tel', function() {
         return function(tel) {

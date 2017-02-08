@@ -67,6 +67,9 @@ angular.module('controllers', [])
                 $scope.$broadcast('scroll.refreshComplete');
             });
         };
+        $scope.back=function(){
+            $state.go('tour');
+        }    
         temp= true;
         $scope.onClick = function(Name) {
             $scope.search.region = Name.ID;
