@@ -1,3 +1,14 @@
+
+<div class="nav-bar-block" nav-bar="active">
+	<ion-header-bar class="bar-stable bar bar-header disable-user-behavior" align-title="center">
+				<div class="buttons buttons-left header-item">
+					<span class="left-buttons">
+                <button class="button button-icon button-clear ion-navicon hide" menu-toggle="left"></button>
+           		    </span>
+			    </div>
+			<div class="title title-center header-item" style="text-align: center; font-weight:400px;  ">Fellows
+				</div></div></ion-header-bar></div>
+
 <ion-content class="left-menu-background center padding" ng-init="fetchSkills();">
     <ion-list>
         <div class=" card half card-image" ng-repeat="item in category" ng-click="selectCategory(item)">
@@ -7,3 +18,24 @@
         </div>
     </ion-list>
 </ion-content>
+
+<style> .yalow{background-color: #FCD736;}</style>
+<div class="tabs tabs-icon-top yalow" >
+  <a class="tab-item">
+    <i class="icon ion-ios-search"></i>
+    Search
+  </a>
+  <a class="tab-item" ng-click="goto('tour');" >
+    <i class="icon ion-network"></i>
+    How It Works
+  </a>
+  <a class="tab-item" ng-click="goto('search')">
+    <i class="icon ion-ios-location"></i>
+    Set Location
+  </a>
+
+  <a class="tab-item">
+    <i class="icon ion-ios-book"></i>
+    Disclaimer
+  </a>
+</div>

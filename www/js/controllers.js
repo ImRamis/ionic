@@ -17,6 +17,8 @@ angular.module('controllers', [])
     }])
 
 .controller('tourCtrl', ['$scope', '$location', function($scope, $location) {
+      
+      
         $scope.params = {
             'data': {
                 'containerBodyImage': 'img/back.jpg',
@@ -93,6 +95,9 @@ angular.module('controllers', [])
                 $scope.category = response.data;
             })
         };
+        $scope.goto=function(text){
+          $state.go(text);
+      }
         $scope.selectCategory = function(item) {
             $state.go('list', { occupation: item.ID });
         };
