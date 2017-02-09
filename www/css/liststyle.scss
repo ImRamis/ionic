@@ -1,0 +1,60 @@
+//*  #Main Sass
+@import "../../../../../../scss/main-style.scss";
+/*  # Theme Small header + medium item
+===========================================*/
+.item-divider {
+  padding: 10px;
+  border-bottom: 1px solid transparent !important;
+
+  &.header-divider {
+    @include header( 'header-divider');
+    z-index: 9;
+  }
+
+  h2.header-title {
+    @include header( 'header-title');
+  }
+
+  .icon-medium {
+    color: theme-colors('mainColors', 'primary', 'opacity60');
+    font-size: icon-size('icon-medium') !important;
+  }
+}
+/*  # Content
+===========================================*/
+.item-bcg {
+  @include item( 'item-bcg');
+
+  &.item-thumbnail-left {
+    padding-left: 100px;
+    min-height: 93px !important;
+  }
+
+  .icon-medium {
+    @include icon( 'icon-medium');
+  }
+
+  &.activated {
+    border-color: transparent;
+  }
+
+  h2.item-title {
+    @include item( 'item-title');
+  }
+
+  h3.item-subtitle {
+    @include item( 'item-subtitle');
+  }
+
+  .span-small {
+    color: theme-colors('textColors', 'primary', 'opacity60');
+    font-size: font-size-text('p');
+  }
+
+  img {
+    border-radius: $border-radius;
+    height: 56px;
+    width: 56px;
+    top: 5px !important;
+  }
+}

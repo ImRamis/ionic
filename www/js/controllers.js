@@ -40,7 +40,7 @@ angular.module('controllers', [])
                     },
                     {
                         logo: '',
-                        iconSlider: '',
+                        iconSlider: 'icon-star',
                         title: 'Nothing',
                         buttonPrevious: 'Previous',
                         buttonFinish: 'Finish',

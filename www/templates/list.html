@@ -1,14 +1,54 @@
-<!--Theme Simple header with simple list-->
+<!--Theme Simple header with simple list
 <ion-content class="left-menu-background center padding">
-    <ion-refresher pulling-text="Get Handyman" on-refresh="init();">
-    </ion-refresher>
+    <ion-refresher pulling-text="Get Handyman" on-refresh="init();">-->
+    <!--</ion-refresher>-->
     <!--Simple header with simple list Divider-->
-    <ion-list> 
+    <!--<ion-list> -->
         <!--Simple header with simple list Content-->
-        <ion-item ng-click="profile(item.HANDYMANID)" class="item-avatar-left item-icon-right waves-effect waves-light btn" ng-repeat="item in handy">
+        <!--<ion-item ng-click="profile(item.HANDYMANID)" class="item-avatar-left item-icon-right waves-effect waves-light btn" ng-repeat="item in handy">
             <img ng-src="{{item.IMAGE}}"  alt="" />
             <span class="item-title span-small"><span>{{item.FIRSTNAME}}</span> <span>{{item.MIDDLENAME}}</span> <span>{{item.LASTNAME}}</span></span>
             <a ng-href="tel: {{item.MOBILEPHONE | tel}}"> <i class="icon ion-ios-telephone small "> </i></a>
         </ion-item>
     </ion-list>
+</ion-content>-->
+  
+<link rel="stylesheet" href="css\liststyle.css">
+<link rel="stylesheet" href="css\liststyle.scss">
+
+
+
+<div class="nav-bar-block" nav-bar="active">
+	<ion-header-bar class="bar-stable bar bar-header disable-user-behavior" align-title="center">
+				<div class="buttons buttons-left header-item">
+					<span class="left-buttons">
+                <button class="button button-icon button-clear ion-navicon hide" menu-toggle="left"></button>
+           		    </span>
+			    </div>
+			<div class="title title-center header-item" style="text-align: center; font-weight:400px;  ">Fellows
+				</div></div></ion-header-bar></div>
+
+                
+
+
+
+
+<!--Theme Small header + medium item-->
+<ion-content class="has-header left-menu-background">
+  <ion-refresher pulling-text="Get Handyman"
+  on-refresh="init();">
+  </ion-refresher>
+  <!--Small header + medium item-->
+  <ion-list  >
+    
+    <!--Small header + medium item Content-->
+    <ion-item class="item-thumbnail-left item-icon-right item-bcg waves-effect waves-light waves-block item item-divider"
+    ng-repeat="item in handy" ng-click="profile(item.HANDYMANID)">
+      <img ng-src="img/avatar-small/2.jpg" alt="{{item.title}}" />
+      <h2 class="item-title">{{item.FIRSTNAME}} {{item.MIDDLENAME}} {{item.LASTNAME}}</h2>
+      <h3 class="item-subtitle">{{item.ADDRESS}}</h3>
+      <span class="span-small">{{item.SHOPNAME}}</span>
+      <a ng-href="tel: {{item.MOBILEPHONE | tel}}"> <i class="icon ion-ios-telephone small "> </i></a>
+    </ion-item>
+  </ion-list>
 </ion-content>

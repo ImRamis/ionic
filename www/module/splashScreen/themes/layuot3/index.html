@@ -26,21 +26,24 @@
 </style>
 
 
+
+
+
 <!--Theme Down + fade in + Ken Burns-->
 
-<ion-content style="background-color: #FCD736;" class="has-header" scroll="false">
-  <div id="">
+<ion-content style="background-color: #FCD736;"  scroll="false">
+  <div >
     <img class="splash-screen" ng-src="{{splashScreenController.data.backgroundImage}}">
     <img class="logo-down" ng-src="{{splashScreenController.data.logo}}" alt="Image not available" />
     <div class="item-fade-in">
       <h2 >{{splashScreenController.data.title}}</h2>
     </div>
-    <div class="button-fade-in center">
+    <div class="center">
             
             <button ng-click="splashScreenController.search()" class="btn waves-effect waves-dark ng-binding">
                 Set Location
             </button>
-    </div>
+    </div>  
   </div>
 <button ng-click="splashScreenController.tour()"  class="batt button button-clear button-positive ">
                 How It Works
