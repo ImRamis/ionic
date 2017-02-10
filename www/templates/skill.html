@@ -1,4 +1,6 @@
-
+<style>
+  .imag{background-color:#202020; }
+</style>
 <div class="nav-bar-block" nav-bar="active">
 	<ion-header-bar class="bar-stable bar bar-header disable-user-behavior" align-title="center">
 				<div class="buttons buttons-left header-item">
@@ -6,10 +8,10 @@
                 <button class="button button-icon button-clear ion-navicon hide" menu-toggle="left"></button>
            		    </span>
 			    </div>
-			<div class="title title-center header-item" style="text-align: center; font-weight:400px;  ">Fellows
+			<div class="title title-center header-item" style="text-align: center; font-weight:400px;  "><img style="position: relative;margin-top: 10px; width: 150px" src="img\logo.png" alt="">
 				</div></div></ion-header-bar></div>
 
-<ion-content class="left-menu-background center padding" ng-init="fetchSkills();">
+<ion-content class="imag center padding" ng-init="fetchSkills();">
     <ion-list>
         <div class=" card half card-image" ng-repeat="item in category" ng-click="selectCategory(item)">
             <div class=" waves-effect waves-block waves-dark card-image">

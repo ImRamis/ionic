@@ -18,14 +18,14 @@
 
 
 
-<div class="nav-bar-block" nav-bar="active">
+<div class="nav-bar-block " nav-bar="active">
 	<ion-header-bar class="bar-stable bar bar-header disable-user-behavior" align-title="center">
 				<div class="buttons buttons-left header-item">
 					<span class="left-buttons">
                 <button class="button button-icon button-clear ion-navicon hide" menu-toggle="left"></button>
            		    </span>
 			    </div>
-			<div class="title title-center header-item" style="text-align: center; font-weight:400px;  ">Fellows
+			<div class="title title-center header-item" style="text-align: center; font-weight:400px;  "><img style="position: relative;margin-top: 10px; width: 150px" src="img\logo.png" alt="">
 				</div></div></ion-header-bar></div>
 
                 
@@ -34,8 +34,8 @@
 
 
 <!--Theme Small header + medium item-->
-<ion-content class="has-header left-menu-background">
-  <ion-refresher pulling-text="Get Handyman"
+<ion-content class="has-header" style="background-color:#202020;">
+  <ion-refresher pulling-text="Get Handyman" style="color :#FCD736;"
   on-refresh="init();">
   </ion-refresher>
   <!--Small header + medium item-->
@@ -48,7 +48,9 @@
       <h2 class="item-title">{{item.FIRSTNAME}} {{item.MIDDLENAME}} {{item.LASTNAME}}</h2>
       <h3 class="item-subtitle">{{item.ADDRESS}}</h3>
       <span class="span-small">{{item.SHOPNAME}}</span>
+      <div class="right">
       <a ng-href="tel: {{item.MOBILEPHONE | tel}}"> <i class="icon ion-ios-telephone small "> </i></a>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>

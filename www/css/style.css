@@ -110,14 +110,14 @@ p {
     font-size: 20px; }
 
 .scroll-refresher .ionic-refresher-content {
-  color: #7fcac3; }
+  color: #FCD736; }
 
 .spinner,
 .spinner-ios,
 .spinner-ios-small {
-  color: #00bea4;
-  fill: #00bea4;
-  stroke: #00bea4; }
+  color: #FCD736;
+  fill: #FCD736;
+  stroke: #FCD736; }
 
 .block-table {
   width: 100%;

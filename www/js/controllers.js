@@ -1,9 +1,14 @@
 angular.module('controllers', [])
     .controller('SplashScreenCtrl', ['$scope', '$state', '$window', function($scope, $state, $window) {
+
         $scope.url = 'skill';
         if ($window.localStorage['region'] == undefined || $window.localStorage['subregion'] == undefined)
             $scope.url = 'search';
+        if ($window.localStorage['region'] != undefined  || $window.localStorage['subregion'] != undefined)
+            {$state.go('skill');}
 
+
+            
         $scope.params = {
             'data': {
                 'duration': 3000,
@@ -106,7 +111,7 @@ angular.module('controllers', [])
         $scope.occ = $stateParams.occupation;
         $scope.init = function() {
             $scope.handy = 0;
-            $ionicLoading.show({ template: 'Fetching...' });
+            $ionicLoading.show({ template: 'Fetching...' }); //jab ye sai data dalega tw value se set krlenge 
             apiService.getData('handyView/AREAID/' + 120).then(function success(response) {
                 if (response.data.error == undefined) {
                     response.data = $filter('filter')(response.data, { 'OCCUPATIONID': $scope.occ });
@@ -136,6 +141,7 @@ angular.module('controllers', [])
         $scope.init();
     }]).controller('profileCtrl', function($scope, apiService, $ionicLoading, $stateParams, $filter) {
         $scope.init = function() {
+            
             $ionicLoading.show({ template: 'Loading Handyman' });
             apiService.getData('handyView/HANDYMANID/' + $stateParams.id).then(function success(response) {
                 $ionicLoading.hide();
