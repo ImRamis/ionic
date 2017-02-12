@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.myproject148494" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>MyProject</name>
+<widget id="com.relevantalpha.fellows" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Fellows</name>
   <description>&#xD;
-        An Ionic Framework and Cordova project.&#xD;
+        A handyman fellow app&#xD;
     </description>
   <author email="you@example.com" href="http://example.com/">&#xD;
-      Your Name Here&#xD;
+      RelevantAlpha&#xD;
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -13,14 +13,13 @@
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
-  <preference name="SplashScreenDelay" value="100"/>
-  <preference name="FadeSplashScreenDuration" value="100"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
-  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreen" value="none"/>
   <preference name="FadeSplashScreen" value="false"/>
   <preference name="SplashScreenDelay" value="0"/>
    <preference name="FadeSplashScreenDuration" value="0"/>
+   <allow-navigation href="*" />
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

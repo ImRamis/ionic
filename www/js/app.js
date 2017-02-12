@@ -49,7 +49,9 @@ angular.module('ion-affix', ['ionic']).directive('ionAffix', ['$ionicPosition', 
 }]);
 angular.module('starter', ['ionic', 'ion-affix', 'ngSplashScreen', 'ngParallax', 'controllers', 'ngImageGallery', 'ui.router', 'ngWizard', 'services', 'angular.filter', 'ngListView'])
     .run(function($ionicPlatform) {
+
         $ionicPlatform.ready(function() {
+              navigator.splashscreen.hide();
             if (window.cordova && window.cordova.plugins.Keyboard) {
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
                 cordova.plugins.Keyboard.disableScroll(true);
