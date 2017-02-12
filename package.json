@@ -1,7 +1,7 @@
 {
-  "name": "myproject",
+  "name": "Fellows",
   "version": "1.1.1",
-  "description": "MyProject: An Ionic project",
+  "description": "Fellows: a Handyman application",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
